@@ -17,7 +17,7 @@ const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
 
 const MovieCard = ({ id, poster_path, title, vote_average, release_date }) => {
   const { user } = useGlobalAuthContext()
-  const { addDocument } = useFirestore('bookmarks')
+  const { addDocument, deleteDocument } = useFirestore('bookmarks')
   const { documents } = useBookmarks('bookmarks')
   const [bookmark, setBookmark] = useState(false)
 
@@ -50,6 +50,30 @@ const MovieCard = ({ id, poster_path, title, vote_average, release_date }) => {
       release_date,
       vote_average
     })
+  }
+
+  const deleteBookmark = movieId => {
+    if (documents) {
+      {
+        /*documents.map(document => {
+        if (document.uid === userId) {
+          setBookmark(false)
+          deleteDocument(document.id)
+
+          //console.log(document, response)
+        }
+      )*/
+      }
+
+      for (let i = 0; i < documents.length; i++) {
+        if (documents[i].number === movieId) {
+          console.log(movieId)
+          setBookmark(false)
+          deleteDocument(documents[i].id)
+          break
+        }
+      }
+    }
   }
 
   return (
@@ -92,7 +116,7 @@ const MovieCard = ({ id, poster_path, title, vote_average, release_date }) => {
           )}
 
           {bookmark && (
-            <h5 id='remove'>
+            <h5 id='remove' onClick={() => deleteBookmark(id)}>
               <i className='fa-solid fa-trash-can'></i> Bookmark
             </h5>
           )}

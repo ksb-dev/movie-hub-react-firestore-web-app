@@ -19,7 +19,7 @@ const ImageInfo = ({ movie, getClassByRate, getTrailer, id }) => {
   const { user } = useGlobalAuthContext()
   const { toggleMode } = useGlobalContext()
   const { documents } = useBookmarks('bookmarks')
-  const { addDocument } = useFirestore('bookmarks')
+  const { addDocument, deleteDocument } = useFirestore('bookmarks')
 
   const [bookmark, setBookmark] = useState(false)
 
@@ -55,6 +55,30 @@ const ImageInfo = ({ movie, getClassByRate, getTrailer, id }) => {
       release_date,
       vote_average
     })
+  }
+
+  const deleteBookmark = movieId => {
+    if (documents) {
+      {
+        /*documents.map(document => {
+        if (document.uid === userId) {
+          setBookmark(false)
+          deleteDocument(document.id)
+
+          //console.log(document, response)
+        }
+      )*/
+      }
+
+      for (let i = 0; i < documents.length; i++) {
+        if (documents[i].number === Number(movieId)) {
+          console.log(movieId)
+          setBookmark(false)
+          deleteDocument(documents[i].id)
+          break
+        }
+      }
+    }
   }
 
   return (
@@ -103,7 +127,7 @@ const ImageInfo = ({ movie, getClassByRate, getTrailer, id }) => {
           )}
 
           {bookmark && (
-            <h5 id='remove'>
+            <h5 id='remove' onClick={() => deleteBookmark(id)}>
               <i className='fa-solid fa-trash-can'></i> Bookmark
             </h5>
           )}

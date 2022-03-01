@@ -22,7 +22,7 @@ const Bookmarks = ({ movies }) => {
 
   const [bookmarks, setBookmarks] = useState([])
 
-  console.log(bookmarks)
+  //console.log(bookmarks)
 
   useEffect(() => {
     if (!user) {
