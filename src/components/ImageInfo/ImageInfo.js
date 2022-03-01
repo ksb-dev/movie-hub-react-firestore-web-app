@@ -72,7 +72,7 @@ const ImageInfo = ({ movie, getClassByRate, getTrailer, id }) => {
 
       for (let i = 0; i < documents.length; i++) {
         if (documents[i].number === Number(movieId)) {
-          console.log(movieId)
+          //console.log(movieId)
           setBookmark(false)
           deleteDocument(documents[i].id)
           break
