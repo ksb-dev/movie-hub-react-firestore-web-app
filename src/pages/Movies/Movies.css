@@ -49,19 +49,21 @@
   color: #fff;
 }
 
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .all .one-movie {
     width: 150px;
     margin: 0.5rem;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   .all {
     width: 100vw;
   }
 
   .all .one-movie {
     margin: 0.5rem;
+    margin-left: 0;
+    width: 100px;
   }
 }
