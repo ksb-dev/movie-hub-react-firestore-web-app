@@ -13,7 +13,7 @@ export default function Login () {
   const [password, setPassword] = useState('')
 
   const { user } = useGlobalAuthContext()
-  const { login } = useLogin()
+  const { login, isPending, error } = useLogin()
 
   const navigate = useNavigate()
 
@@ -29,7 +29,11 @@ export default function Login () {
   }
 
   return (
-    <>
+    <div className='main'>
+      <div className='title'>
+        <h1>MovieHub</h1>
+      </div>
+
       <form onSubmit={handleSubmit} className='login-form'>
         <h2>login</h2>
 
@@ -51,10 +55,16 @@ export default function Login () {
           />
         </label>
 
-        <button className='btn'>Login</button>
+        {isPending ? (
+          <button className='btn'>Loggging in</button>
+        ) : (
+          <button className='btn'>Login</button>
+        )}
 
         <Link to='/signup'>Signup</Link>
+
+        {error && <h4>{error}</h4>}
       </form>
-    </>
+    </div>
   )
 }

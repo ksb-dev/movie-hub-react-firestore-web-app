@@ -30,7 +30,11 @@ export default function Signup () {
   }
 
   return (
-    <>
+    <div className='main'>
+      <div className='title'>
+        <h1>MovieHub</h1>
+      </div>
+
       <form onSubmit={handleSubmit} className='signup-form'>
         <h2>sign up</h2>
 
@@ -61,7 +65,7 @@ export default function Signup () {
           />
         </label>
 
-        {!isPending && <button className='btn'>Sign up</button>}
+        {!isPending && <button className='btn'>Signup</button>}
 
         {isPending && (
           <button className='btn' disabled>
@@ -73,6 +77,6 @@ export default function Signup () {
 
         {error && <p>{error}</p>}
       </form>
-    </>
+    </div>
   )
 }

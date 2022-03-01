@@ -68,7 +68,7 @@ const MovieCard = ({ id, poster_path, title, vote_average, release_date }) => {
 
       for (let i = 0; i < documents.length; i++) {
         //console.log(typeof documents[i].number)
-        if (documents[i].number === movieId) {
+        if (documents[i].number == movieId) {
           //console.log(movieId)
           setBookmark(false)
           deleteDocument(documents[i].id)
