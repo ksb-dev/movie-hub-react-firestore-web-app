@@ -22,6 +22,8 @@ const Bookmarks = ({ movies }) => {
 
   const [bookmarks, setBookmarks] = useState([])
 
+  console.log(bookmarks)
+
   useEffect(() => {
     if (!user) {
       navigate('/login')
@@ -33,14 +35,9 @@ const Bookmarks = ({ movies }) => {
       let res = []
 
       documents.map(document => {
-        movies.map(movie => {
-          if (
-            document.poster_path === movie.poster_path &&
-            document.uid === user.uid
-          ) {
-            res.push(document)
-          }
-        })
+        if (document.uid === user.uid) {
+          res.push(document)
+        }
       })
 
       setBookmarks(res)
