@@ -1,6 +1,9 @@
 import React from 'react'
+
+// Context
 import { useGlobalContext } from '../../context/context'
 
+// Styles
 import './PersonDetail.css'
 
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'

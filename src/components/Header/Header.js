@@ -2,16 +2,18 @@ import React from 'react'
 import { useRef } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 
+// Context
+import { useGlobalContext } from '../../context/context'
+import { useGlobalAuthContext } from '../../context/AuthContext'
+
+// Components
 import mode from '../../images/mode.svg'
 import menu from '../../images/menu.svg'
 import whiteMode from '../../images/white-mode.svg'
 import whiteMenu from '../../images/white-menu.svg'
 
-import { useGlobalContext } from '../../context/context'
-import { useGlobalAuthContext } from '../../context/AuthContext'
-
+// Styles
 import './Header.css'
-import { useEffect } from 'react'
 
 const POPULAR = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&sort_by=popularity.desc`
 const TRENDING = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`
@@ -25,12 +27,6 @@ const Header = () => {
 
   const navigate = useNavigate()
   const { user } = useGlobalAuthContext()
-
-  useEffect(() => {
-    if (!user) {
-      navigate('login')
-    }
-  }, [user, navigate])
 
   const toggle = mode => {
     if (mode === 'white') {

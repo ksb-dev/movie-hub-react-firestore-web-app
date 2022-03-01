@@ -1,5 +1,9 @@
-import { useGlobalContext } from '../../context/context'
 import React, { useRef } from 'react'
+
+// Hooks
+import { useGlobalContext } from '../../context/context'
+
+// Styles
 import './Cast.css'
 
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'

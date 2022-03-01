@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react'
+
+// Context
 import { useGlobalContext } from '../../context/context'
-import { useBookmarks } from '../../hooks/useBookmarks'
-import { useFirestore } from '../../hooks/useFirestore'
 import { useGlobalAuthContext } from '../../context/AuthContext'
 
+// Hooks
+import { useBookmarks } from '../../hooks/useBookmarks'
+import { useFirestore } from '../../hooks/useFirestore'
+
+// Styles
 import './ImageInfo.css'
 
 const url =
@@ -11,10 +16,10 @@ const url =
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
 
 const ImageInfo = ({ movie, getClassByRate, getTrailer, id }) => {
+  const { user } = useGlobalAuthContext()
   const { toggleMode } = useGlobalContext()
   const { documents } = useBookmarks('bookmarks')
   const { addDocument } = useFirestore('bookmarks')
-  const { user } = useGlobalAuthContext()
 
   const [bookmark, setBookmark] = useState(false)
 
@@ -32,14 +37,14 @@ const ImageInfo = ({ movie, getClassByRate, getTrailer, id }) => {
   } = movie
 
   useEffect(() => {
-    if (documents) {
+    if (user && documents) {
       documents.map(document => {
-        if (document.poster_path === poster_path) {
+        if (document.poster_path === poster_path && document.uid === user.uid) {
           setBookmark(true)
         }
       })
     }
-  }, [documents, poster_path])
+  }, [user, documents, poster_path])
 
   const addBookmark = (id, title, poster_path, release_date, vote_average) => {
     addDocument({

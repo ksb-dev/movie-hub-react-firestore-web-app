@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { useGlobalContext } from './context/context'
 import { useGlobalAuthContext } from './context/AuthContext'
@@ -12,26 +12,31 @@ import Login from './pages/Login/Login'
 import Bookmarks from './pages/Bookmarks/Bookmarks'
 
 function App () {
-  const { toggleMode } = useGlobalContext()
-  const { authIsReady } = useGlobalAuthContext()
+  const { toggleMode, movies } = useGlobalContext()
+  const { authIsReady, user } = useGlobalAuthContext()
 
   return (
     <div className={toggleMode === 'white' ? 'view white' : 'view black'}>
       {authIsReady && (
         <>
-          <Routes>
-            <Route exact path='/' element={<Home />} />
+          <BrowserRouter>
+            <Routes>
+              <Route exact path='/' element={<Home />} />
 
-            <Route path='/movie/:id' element={<Movie />} />
+              <Route path='/movie/:id' element={<Movie />} />
 
-            <Route path='/search' element={<Search />} />
+              <Route path='/search' element={<Search />} />
 
-            <Route path='/bookmarks' element={<Bookmarks />} />
+              <Route
+                path='/bookmarks'
+                element={<Bookmarks movies={movies} />}
+              />
 
-            <Route path='/login' element={<Login />} />
+              <Route path='/login' element={<Login />} />
 
-            <Route path='/signup' element={<Signup />} />
-          </Routes>
+              <Route path='/signup' element={<Signup />} />
+            </Routes>
+          </BrowserRouter>
         </>
       )}
     </div>

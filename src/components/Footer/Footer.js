@@ -1,9 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// Context
 import { useGlobalContext } from '../../context/context'
+
+// Hooks
 import { useLogOut } from '../../hooks/useLogOut'
 
+// Styles
 import './Footer.css'
 
 const Footer = () => {

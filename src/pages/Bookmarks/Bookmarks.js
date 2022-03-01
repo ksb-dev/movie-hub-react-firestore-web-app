@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 // Context
@@ -14,18 +14,38 @@ import MovieCard from '../../components/MovieCard/MovieCard'
 // Style
 import './Bookmarks.css'
 
-const Bookmarks = () => {
-  const { isLoading, toggleMode } = useGlobalContext()
+const Bookmarks = ({ movies }) => {
   const { user } = useGlobalAuthContext()
+  const navigate = useNavigate()
+  const { isLoading, toggleMode } = useGlobalContext()
   const { documents } = useBookmarks('bookmarks')
 
-  const navigate = useNavigate()
+  const [bookmarks, setBookmarks] = useState([])
 
   useEffect(() => {
     if (!user) {
       navigate('/login')
     }
   }, [user, navigate])
+
+  useEffect(() => {
+    if (user && documents) {
+      let res = []
+
+      documents.map(document => {
+        movies.map(movie => {
+          if (
+            document.poster_path === movie.poster_path &&
+            document.uid === user.uid
+          ) {
+            res.push(document)
+          }
+        })
+      })
+
+      setBookmarks(res)
+    }
+  }, [user, documents, movies])
 
   if (isLoading) {
     return <div className='loading'></div>
@@ -49,8 +69,8 @@ const Bookmarks = () => {
       </h4>
 
       <section className='all'>
-        {documents
-          ? documents.map(movie => {
+        {bookmarks
+          ? bookmarks.map(movie => {
               const {
                 number,
                 title,

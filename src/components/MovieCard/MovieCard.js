@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import { useFirestore } from '../../hooks/useFirestore'
+// Context
 import { useGlobalAuthContext } from '../../context/AuthContext'
+
+// Hooks
+import { useFirestore } from '../../hooks/useFirestore'
 import { useBookmarks } from '../../hooks/useBookmarks'
 
+// Styles
 import './MovieCard.css'
 
 const url =
@@ -12,20 +16,20 @@ const url =
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
 
 const MovieCard = ({ id, poster_path, title, vote_average, release_date }) => {
-  const { addDocument } = useFirestore('bookmarks')
   const { user } = useGlobalAuthContext()
+  const { addDocument } = useFirestore('bookmarks')
   const { documents } = useBookmarks('bookmarks')
   const [bookmark, setBookmark] = useState(false)
 
   useEffect(() => {
-    if (documents) {
+    if (user && documents) {
       documents.map(document => {
-        if (document.poster_path === poster_path) {
+        if (document.poster_path === poster_path && document.uid === user.uid) {
           setBookmark(true)
         }
       })
     }
-  }, [documents, poster_path])
+  }, [user, documents, poster_path])
 
   const getClassByRate = vote => {
     if (vote >= 8) {

@@ -1,8 +1,12 @@
 import React from 'react'
+
+// Context
 import { useGlobalContext } from '../../context/context'
 
+// Components
 import YouTube from 'react-youtube'
 
+// Styles
 import './Youtube.css'
 
 const Youtube = ({ youtube_div, off, trailerUrl, setTrailerUrl }) => {

@@ -24,8 +24,8 @@ const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     initAuth.onAuthStateChanged(user => {
-      //const unsubscribeAuth = dispatch({ type: 'IS_AUTH_READY', payload: user })
-      //unsubscribeAuth()
+      //const unsubscribe = dispatch({ type: 'IS_AUTH_READY', payload: user })
+      //unsubscribe()
 
       dispatch({ type: 'IS_AUTH_READY', payload: user })
     })

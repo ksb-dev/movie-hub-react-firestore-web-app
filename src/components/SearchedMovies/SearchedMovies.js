@@ -1,8 +1,12 @@
 import React from 'react'
+
+// Context
 import { useGlobalContext } from '../../context/context'
 
+// Components
 import MovieCard from '../MovieCard/MovieCard'
 
+// Styles
 import './SearchedMovies.css'
 
 const SearchedMovies = () => {
