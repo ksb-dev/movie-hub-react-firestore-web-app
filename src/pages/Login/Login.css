@@ -1,7 +1,7 @@
 .main {
   width: 100vw;
   height: 100vh;
-  background: url('../../images/main3.jpg');
+  background: url('../../images/back.jpg');
   background-size: cover;
   display: flex;
   flex-direction: column;

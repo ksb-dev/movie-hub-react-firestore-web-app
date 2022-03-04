@@ -145,7 +145,7 @@ const Header = () => {
             ></i>
           </li>
           <li className='bookmarks'>
-            <Link to='/bookmarks'>Bookmarks</Link>
+            <Link to='/bookmarks'>Wishlist</Link>
           </li>
           <li onClick={handlePopular}>Popular</li>
           <li onClick={handleTrending}>Trending</li>

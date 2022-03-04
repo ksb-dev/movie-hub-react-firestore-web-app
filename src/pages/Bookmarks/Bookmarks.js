@@ -62,35 +62,48 @@ const Bookmarks = ({ movies }) => {
             : 'category whiteColorCategory blackMovies'
         }
       >
-        Bookmarks
+        <span
+          style={{
+            background: 'tomato',
+            color: 'white',
+            padding: '0.7rem 1rem',
+            borderRadius: '50px'
+          }}
+        >
+          Wishlist{' '}
+          <span style={{ paddingLeft: '0.5rem' }}>{bookmarks.length}</span>
+        </span>
       </h4>
 
       <section className='all'>
-        {bookmarks
-          ? bookmarks.map(movie => {
-              const {
-                number,
-                title,
-                poster_path,
-                release_date,
-                vote_average
-              } = movie
+        {!bookmarks.length && (
+          <h3 style={{ color: 'tomato' }}>Add movies to Wishlist</h3>
+        )}
 
-              return (
-                <article className='one-movie' key={number}>
-                  <MovieCard
-                    movie={movie}
-                    id={number}
-                    title={title}
-                    poster_path={poster_path}
-                    vote_average={vote_average}
-                    release_date={release_date}
-                    marked={false}
-                  />
-                </article>
-              )
-            })
-          : ''}
+        {bookmarks &&
+          bookmarks.map(movie => {
+            const {
+              number,
+              title,
+              poster_path,
+              release_date,
+              vote_average
+            } = movie
+
+            return (
+              <article className='one-movie' key={number}>
+                <MovieCard
+                  movie={movie}
+                  id={number}
+                  title={title}
+                  poster_path={poster_path}
+                  vote_average={vote_average}
+                  release_date={release_date}
+                  marked={false}
+                />
+              </article>
+            )
+          })}
       </section>
 
       <Footer />
