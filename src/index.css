@@ -290,6 +290,7 @@ Single Movie
 
 .white {
   background: rgb(255, 255, 255);
+  background: rgb(220, 220, 220);
 }
 
 ::-webkit-scrollbar {

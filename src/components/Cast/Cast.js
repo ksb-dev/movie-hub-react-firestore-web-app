@@ -35,17 +35,15 @@ const Cast = ({ setPerson, setPersonError, detail, people }) => {
   return (
     <div
       className={
-        toggleMode === 'white'
-          ? 'cast-div castWhiteAlpha blackColor'
-          : 'cast-div castBlackAlpha whiteColor'
+        toggleMode === 'white' ? 'cast-div blackColor' : 'cast-div whiteColor'
       }
     >
       <h3>Cast</h3>
       <div
         className={
           toggleMode === 'white'
-            ? 'section-center whiteBackground blackColor'
-            : 'section-center blackBackground whiteColor'
+            ? 'section-center blackColor'
+            : 'section-center whiteColor'
         }
       >
         {people &&

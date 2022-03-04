@@ -14,8 +14,9 @@
   overflow: auto;
   letter-spacing: 1px;
   padding: 1rem;
-  padding-left: 0.5rem;
+  padding-left: 0rem;
   border-radius: 3px;
+  margin-left: -0.5rem;
 }
 
 .cast-div .section-center .actor-img-name {
@@ -31,6 +32,7 @@
   object-fit: cover;
   border-radius: 3px;
   cursor: pointer;
+  box-shadow: 2px 2px 2px #000;
 }
 
 .cast-div .section-center .actor-img-name .person-img:hover {
@@ -111,7 +113,7 @@
 }
 
 .castWhiteAlpha {
-  background: rgb(255, 255, 255, 0.9);
+  background: rgba(220, 220, 220, 0.9);
 }
 
 .blackBackground {
@@ -119,5 +121,5 @@
 }
 
 .whiteBackground {
-  background: rgb(255, 255, 255);
+  background: rgb(220, 220, 220);
 }

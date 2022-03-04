@@ -17,6 +17,7 @@
   align-items: center;
   justify-content: center;
   background: whitesmoke;
+  padding: 0.5rem;
 }
 
 .one-movie .img-rating {
@@ -24,7 +25,7 @@
 }
 
 .one-movie .img-rating img {
-  width: 250px;
+  width: 232px;
   display: block;
   object-fit: cover;
   border-radius: 3px;

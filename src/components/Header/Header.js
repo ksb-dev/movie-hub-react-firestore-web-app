@@ -160,8 +160,8 @@ const Header = () => {
       <div
         className={
           toggleMode === 'white'
-            ? 'header headerBlackBackground headerWhiteColor'
-            : 'header headerWhiteBackground headerBlackColor'
+            ? 'header headerWhiteBackground headerBlackColor'
+            : 'header headerBlackBackground headerWhiteColor'
         }
       >
         <div className='name-mode-menu'>
@@ -178,7 +178,7 @@ const Header = () => {
           <div className='mode-menu'>
             <h3>
               <img
-                src={toggleMode === 'white' ? whiteMode : mode}
+                src={toggleMode === 'white' ? mode : whiteMode}
                 alt=''
                 className='mode'
                 onClick={() => toggle(toggleMode)}
@@ -186,7 +186,7 @@ const Header = () => {
             </h3>
             <h3>
               <img
-                src={toggleMode === 'white' ? whiteMenu : menu}
+                src={toggleMode === 'white' ? menu : whiteMenu}
                 alt=''
                 className='menu'
                 onClick={showMenu}

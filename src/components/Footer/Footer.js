@@ -18,21 +18,21 @@ const Footer = () => {
     <div
       className={
         toggleMode === 'white'
-          ? 'footer footerBlackBackground'
-          : 'footer footerWhiteBackground'
+          ? 'footer footerWhiteBackground footerBlackColor'
+          : 'footer footerBlackBackground footerWhiteColor'
       }
     >
       <Link to='/search' className='search-icon'>
         <i
           className={
             toggleMode === 'white'
-              ? 'fa-solid fa-magnifying-glass footerWhiteColor'
-              : 'fa-solid fa-magnifying-glass footerBlackColor'
+              ? 'fa-solid fa-magnifying-glass footerBlackColor'
+              : 'fa-solid fa-magnifying-glass footerWhiteColor'
           }
         ></i>
         <span
           className={
-            toggleMode === 'white' ? ' footerWhiteColor' : ' footerBlackColor'
+            toggleMode === 'white' ? ' footerBlackColor' : ' footerWhiteColor'
           }
         >
           Search
@@ -43,13 +43,13 @@ const Footer = () => {
         <i
           className={
             toggleMode === 'white'
-              ? 'fa-solid fa-arrow-left footerWhiteColor'
-              : 'fa-solid fa-arrow-left footerBlackColor'
+              ? 'fa-solid fa-arrow-left footerBlackColor'
+              : 'fa-solid fa-arrow-left footerWhiteColor'
           }
         ></i>
         <span
           className={
-            toggleMode === 'white' ? ' footerWhiteColor' : ' footerBlackColor'
+            toggleMode === 'white' ? ' footerBlackColor' : ' footerWhiteColor'
           }
         >
           Logout

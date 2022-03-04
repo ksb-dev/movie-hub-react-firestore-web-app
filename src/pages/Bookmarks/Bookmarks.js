@@ -58,8 +58,8 @@ const Bookmarks = ({ movies }) => {
       <h4
         className={
           toggleMode === 'white'
-            ? 'category blackColorCategory white'
-            : 'category whiteColorCategory black'
+            ? 'category blackColorCategory whiteMovies'
+            : 'category whiteColorCategory blackMovies'
         }
       >
         Bookmarks

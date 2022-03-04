@@ -139,50 +139,59 @@ const Movie = () => {
     <div
       className='full-page'
       style={{
-        background: `url(${IMG_PATH + poster_path})`
+        background: `url(${IMG_PATH + poster_path})`,
+        backgroundRepeat: 'no-repeat',
+        objectFit: 'cover',
+        width: '100vw'
       }}
     >
       <Header />
 
       {/* Single Movie */}
 
-      <div className='single-movie'>
-        {/* Image Information */}
+      <div
+        className={
+          toggleMode === 'white' ? 'whole whiteAlpha' : 'whole blackAlpha'
+        }
+      >
+        <div className='single-movie'>
+          {/* Image Information */}
 
-        <ImageInfo
-          movie={movie}
-          getClassByRate={getClassByRate}
-          getTrailer={getTrailer}
-          id={id}
-          trailerUrl={trailerUrl}
-        />
-
-        {/* Overview */}
-
-        {overview && (
-          <div
-            className={
-              toggleMode === 'white'
-                ? 'overview whiteBackground blackColor'
-                : 'overview blackBackground whiteColor'
-            }
-          >
-            <h3>Overview</h3>
-            <h4>{overview}</h4>
-          </div>
-        )}
-
-        {/* Cast */}
-
-        {people && (
-          <Cast
-            people={people}
-            setPerson={setPerson}
-            personError={personError}
-            setPersonError={setPersonError}
-            detail={detail}
+          <ImageInfo
+            movie={movie}
+            getClassByRate={getClassByRate}
+            getTrailer={getTrailer}
+            id={id}
+            trailerUrl={trailerUrl}
           />
-        )}
+
+          {/* Overview */}
+
+          {overview && (
+            <div
+              className={
+                toggleMode === 'white'
+                  ? 'overview whiteBackground blackColor'
+                  : 'overview blackBackground whiteColor'
+              }
+            >
+              <h3>Overview</h3>
+              <h4>{overview}</h4>
+            </div>
+          )}
+
+          {/* Cast */}
+
+          {people && (
+            <Cast
+              people={people}
+              setPerson={setPerson}
+              personError={personError}
+              setPersonError={setPersonError}
+              detail={detail}
+            />
+          )}
+        </div>
       </div>
 
       {/* Footer */}

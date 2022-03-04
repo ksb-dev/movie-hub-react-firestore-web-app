@@ -13,9 +13,20 @@
   align-items: center;
   justify-content: center;
   max-width: 1280px;
-  height: 550px;
-  overflow: auto;
+  /*height: 550px;
+  overflow: auto;*/
   margin: 0 auto;
+  border-radius: 3px;
+  padding-bottom: 5rem;
+}
+
+.blackMovies {
+  background: rgb(90, 90, 90);
+}
+
+.whiteMovies {
+  background: rgb(255, 255, 255);
+  background: whitesmoke;
 }
 
 .blackColorCategory {
