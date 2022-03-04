@@ -6,27 +6,24 @@
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 0.7rem;
+  justify-content: center;
+  padding: 0.5rem;
 }
 
-.footer a {
-  display: inline-block;
-}
-
-.footer a {
+.footer a button {
   font-family: 'Montserrat', sans-serif;
   margin-right: 1rem;
-  background: transparent;
   border: none;
   cursor: pointer;
   font-size: 1rem;
   letter-spacing: 1px;
   margin-right: 2rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 50px;
 }
 
 .footer a i {
-  margin-right: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .footer span {
@@ -41,10 +38,27 @@
   background: rgb(90, 90, 90);
 }
 
+.footerWhiteBackgroundAlpha {
+  background: rgba(220, 220, 220, 0.8);
+}
+
+.footerBlackBackgroundAlpha {
+  background: rgba(90, 90, 90, 0.9);
+}
+
 .footerBlackColor {
   color: rgb(90, 90, 90);
 }
 
 .footerWhiteColor {
   color: #fff;
+}
+
+@media only screen and (max-width: 576px) {
+  .footer {
+    padding: 0.4rem;
+  }
+  .footer a button {
+    font-size: 0.7rem;
+  }
 }

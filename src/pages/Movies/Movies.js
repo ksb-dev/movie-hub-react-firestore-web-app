@@ -37,14 +37,16 @@ const Movies = () => {
       {/* movie category*/}
 
       {category && (
-        <h4
-          className={
-            toggleMode === 'white'
-              ? 'category blackColorCategory whiteMovies'
-              : 'category whiteColorCategory blackMovies'
-          }
-        >
-          {category}
+        <h4 className='category'>
+          <span
+            className={
+              toggleMode === 'white'
+                ? 'blackColorCategory'
+                : 'whiteColorCategory'
+            }
+          >
+            {category}
+          </span>
         </h4>
       )}
 

@@ -18,42 +18,58 @@ const Footer = () => {
     <div
       className={
         toggleMode === 'white'
-          ? 'footer footerWhiteBackground footerBlackColor'
-          : 'footer footerBlackBackground footerWhiteColor'
+          ? 'footer footerWhiteBackgroundAlpha footerBlackColor'
+          : 'footer footerBlackBackgroundAlpha footerWhiteColor'
       }
     >
       <Link to='/search' className='search-icon'>
-        <i
+        <button
           className={
             toggleMode === 'white'
-              ? 'fa-solid fa-magnifying-glass footerBlackColor'
-              : 'fa-solid fa-magnifying-glass footerWhiteColor'
-          }
-        ></i>
-        <span
-          className={
-            toggleMode === 'white' ? ' footerBlackColor' : ' footerWhiteColor'
+              ? 'footerBlackBackground'
+              : 'footerWhiteBackground'
           }
         >
-          Search
-        </span>
+          <i
+            className={
+              toggleMode === 'white'
+                ? 'fa-solid fa-magnifying-glass footerWhiteColor'
+                : 'fa-solid fa-magnifying-glass footerBlackColor'
+            }
+          ></i>
+          <span
+            className={
+              toggleMode === 'white' ? ' footerWhiteColor' : ' footerBlackColor'
+            }
+          >
+            Search
+          </span>
+        </button>
       </Link>
 
       <Link to='#' className='search-icon' onClick={logout}>
-        <i
+        <button
           className={
             toggleMode === 'white'
-              ? 'fa-solid fa-arrow-left footerBlackColor'
-              : 'fa-solid fa-arrow-left footerWhiteColor'
-          }
-        ></i>
-        <span
-          className={
-            toggleMode === 'white' ? ' footerBlackColor' : ' footerWhiteColor'
+              ? 'footerBlackBackground'
+              : 'footerWhiteBackground'
           }
         >
-          Logout
-        </span>
+          <i
+            className={
+              toggleMode === 'white'
+                ? 'fa-solid fa-arrow-left footerWhiteColor'
+                : 'fa-solid fa-arrow-left footerBlackColor'
+            }
+          ></i>
+          <span
+            className={
+              toggleMode === 'white' ? ' footerWhiteColor' : ' footerBlackColor'
+            }
+          >
+            Logout
+          </span>
+        </button>
       </Link>
     </div>
   )

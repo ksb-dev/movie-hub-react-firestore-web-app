@@ -160,8 +160,8 @@ const Header = () => {
       <div
         className={
           toggleMode === 'white'
-            ? 'header headerWhiteBackground headerBlackColor'
-            : 'header headerBlackBackground headerWhiteColor'
+            ? 'header headerWhiteBackgroundAlpha headerBlackColor'
+            : 'header headerBlackBackgroundAlpha headerWhiteColor'
         }
       >
         <div className='name-mode-menu'>
@@ -170,9 +170,15 @@ const Header = () => {
           </h3>
 
           {user && (
-            <span>
-              Welcome, <h4>{' ' + user.displayName}</h4>
-            </span>
+            <h4
+              className={
+                toggleMode === 'white'
+                  ? 'headerBlackBackground headerWhiteColor'
+                  : 'headerWhiteBackground headerBlackColor'
+              }
+            >
+              Welcome, {' ' + user.displayName}
+            </h4>
           )}
 
           <div className='mode-menu'>
