@@ -97,8 +97,8 @@
 .info .img-more-info .more-info #tagline {
   font-weight: 600;
   text-align: center;
-  padding: 0.3rem 0.5rem;
-  border-radius: 3px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 50px;
 }
 
 .info .img-more-info .more-info h5 {
@@ -123,10 +123,10 @@
 
 .info .img-more-info .more-info .genre-div #genre {
   margin-left: 0.5rem;
-  padding: 0.1rem 0.4rem;
+  padding: 0.2rem 0.5rem;
   font-size: 0.7rem;
   font-weight: 500;
-  border-radius: 3px;
+  border-radius: 50px;
 }
 
 .info .img-more-info .more-info .trailer-btn {
@@ -140,7 +140,7 @@
   color: #fff;
   cursor: pointer;
   font-weight: 600;
-  border-radius: 50px;
+  border-radius: 3px;
 }
 
 .info .img-more-info .more-info .trailer-btn .fa-play {
