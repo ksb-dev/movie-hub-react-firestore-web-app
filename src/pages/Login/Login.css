@@ -1,31 +1,26 @@
 .main {
   width: 100vw;
   height: 100vh;
-  position: relative;
-  background: url('../../images/main.jpg');
+  background: url('../../images/main3.jpg');
   background-size: cover;
-}
-
-.main .title {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  text-shadow: 5px 5px 25px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .main .title h1 {
   color: #fff;
+  margin-bottom: 2rem;
+  text-shadow: 5px 5px 5px #000;
 }
 
 .main .login-form {
-  position: absolute;
-  width: 360px;
-  right: 5rem;
-  top: 8rem;
+  min-width: 360px;
   padding: 2rem;
   text-transform: capitalize;
   letter-spacing: 1px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   color: #fff;
   border-radius: 3px;
 }
