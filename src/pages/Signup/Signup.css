@@ -40,6 +40,11 @@
   font-size: 1em;
   color: #777;
   width: 100%;
+  border: none;
+}
+
+.main .signup-form input:focus {
+  outline: none;
 }
 
 .main .signup-form a {

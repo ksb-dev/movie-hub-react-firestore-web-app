@@ -142,9 +142,7 @@ const Header = () => {
           {user && (
             <h4
               className={
-                toggleMode === 'white'
-                  ? 'headerBlackBackground headerWhiteColor'
-                  : 'headerWhiteBackground headerBlackColor'
+                toggleMode === 'white' ? 'headerBlackColor' : 'headerWhiteColor'
               }
             >
               {user.displayName !== null ? (

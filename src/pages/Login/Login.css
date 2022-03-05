@@ -41,6 +41,11 @@
   font-size: 1em;
   color: #777;
   width: 100%;
+  border: none;
+}
+
+.main .login-form input:focus {
+  outline: none;
 }
 
 .main .login-form a {
