@@ -139,7 +139,7 @@ const Header = () => {
             MovieHub
           </h3>
 
-          {user.displayName && (
+          {user && (
             <h4
               className={
                 toggleMode === 'white'
@@ -147,7 +147,11 @@ const Header = () => {
                   : 'headerWhiteBackground headerBlackColor'
               }
             >
-              Welcome, {' ' + user.displayName}
+              {user.displayName !== null ? (
+                <span>Welcome, {user.displayName}</span>
+              ) : (
+                'Welcome'
+              )}
             </h4>
           )}
 

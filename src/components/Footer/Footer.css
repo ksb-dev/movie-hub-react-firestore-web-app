@@ -59,10 +59,9 @@
 
 @media only screen and (max-width: 576px) {
   .footer {
-    padding: 0.4rem;
     justify-content: center;
   }
   .footer a button {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
