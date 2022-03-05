@@ -294,9 +294,8 @@ Single Movie
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
   height: 6px;
-  border: 2px rgb(207, 207, 207);
 }
 
 ::-webkit-scrollbar-button:start:decrement,
@@ -311,7 +310,7 @@ Single Movie
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-  background-color: black;
+  background-color: grey;
   border-radius: 20px;
 }
 
