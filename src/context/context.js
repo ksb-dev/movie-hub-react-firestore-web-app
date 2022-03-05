@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react'
 
 const AppContext = React.createContext()
 
-export const POPULAR = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&sort_by=popularity.desc`
+const POPULAR = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&sort_by=popularity.desc&`
 
 const AppProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true)
@@ -58,15 +58,18 @@ const AppProvider = ({ children }) => {
     }
   }
 
-  const fetchMovies = async (url, category) => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    })
+  const fetchMovies = async (url, category, page) => {
+    console.log(url)
+    if (page === 1) {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
 
-    setIsLoading(true)
-    setCategory('')
+      setIsLoading(true)
+      setCategory('')
+    }
 
     try {
       const response = await fetch(url)
@@ -77,7 +80,11 @@ const AppProvider = ({ children }) => {
       if (data.results.length === 0) {
         setError({ show: true, msg: 'Movies not found!' })
       } else {
-        setMovies(data.results)
+        if (page === 1) {
+          setMovies(data.results)
+        } else {
+          setMovies([...movies, ...data.results])
+        }
         setError({ show: false, msg: '' })
         setIsLoading(false)
         setCategory(category)

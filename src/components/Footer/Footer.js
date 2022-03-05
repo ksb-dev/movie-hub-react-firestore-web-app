@@ -22,12 +22,12 @@ const Footer = () => {
           : 'footer footerBlackBackgroundAlpha footerWhiteColor'
       }
     >
-      <Link to='/search' className='search-icon'>
+      <Link to='/search'>
         <button
           className={
             toggleMode === 'white'
-              ? 'footerBlackBackground'
-              : 'footerWhiteBackground'
+              ? 'search-icon footerBlackBackground'
+              : 'search-icon footerWhiteBackground'
           }
         >
           <i

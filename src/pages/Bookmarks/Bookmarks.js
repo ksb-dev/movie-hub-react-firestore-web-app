@@ -66,7 +66,7 @@ const Bookmarks = ({ movies }) => {
           style={{
             background: 'tomato',
             color: 'white',
-            padding: '0.7rem 1rem',
+            padding: '0.5rem 1rem',
             borderRadius: '50px'
           }}
         >

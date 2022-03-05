@@ -53,23 +53,9 @@ const MovieCard = ({ id, poster_path, title, vote_average, release_date }) => {
   }
 
   const deleteBookmark = movieId => {
-    //console.log(typeof movieId)
     if (documents) {
-      {
-        /*documents.map(document => {
-        if (document.uid === userId) {
-          setBookmark(false)
-          deleteDocument(document.id)
-
-          //console.log(document, response)
-        }
-      )*/
-      }
-
       for (let i = 0; i < documents.length; i++) {
-        //console.log(typeof documents[i].number)
         if (documents[i].number == movieId) {
-          //console.log(movieId)
           setBookmark(false)
           deleteDocument(documents[i].id)
           break

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 // Context
@@ -14,10 +14,27 @@ import MovieCard from '../../components/MovieCard/MovieCard'
 import './Movies.css'
 
 const Movies = () => {
-  const { movies, isLoading, category, toggleMode } = useGlobalContext()
+  let [page, setPage] = useState(2)
+
+  let {
+    movies,
+    isLoading,
+    category,
+    toggleMode,
+    fetchMovies
+  } = useGlobalContext()
+
+  const POPULAR = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&sort_by=popularity.desc&page=${page}`
+  const TRENDING = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`
+  const NOW_PLAYING = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=1`
+  const UPCOMING = `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=1`
+  const TOP_RATED = `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=1`
+
   const { user } = useGlobalAuthContext()
 
   const navigate = useNavigate()
+
+  //console.log(POPULAR)
 
   useEffect(() => {
     if (!user) {
@@ -27,6 +44,15 @@ const Movies = () => {
 
   if (isLoading) {
     return <div className='loading'></div>
+  }
+
+  const handleClick = () => {
+    setPage(page + 1)
+    if (category === 'popular') fetchMovies(POPULAR, 'popular', page)
+    if (category === 'trending') fetchMovies(TRENDING, 'popular', page)
+    if (category === 'now playing') fetchMovies(NOW_PLAYING, 'popular', page)
+    if (category === 'upcoming') fetchMovies(UPCOMING, 'popular', page)
+    if (category === 'top rated') fetchMovies(TOP_RATED, 'popular', page)
   }
 
   return (
@@ -51,33 +77,29 @@ const Movies = () => {
       )}
 
       <section className='all'>
-        {movies
-          ? movies.map(movie => {
-              const {
-                id,
-                title,
-                poster_path,
-                release_date,
-                vote_average
-              } = movie
+        {movies &&
+          movies.map(movie => {
+            const { id, title, poster_path, release_date, vote_average } = movie
 
-              return (
-                <article className='one-movie' key={id}>
-                  <MovieCard
-                    movie={movie}
-                    id={id}
-                    title={title}
-                    poster_path={poster_path}
-                    vote_average={vote_average}
-                    release_date={release_date}
-                    marked={false}
-                  />
-                </article>
-              )
-            })
-          : ''}
+            return (
+              <article className='one-movie' key={id}>
+                <MovieCard
+                  movie={movie}
+                  id={id}
+                  title={title}
+                  poster_path={poster_path}
+                  vote_average={vote_average}
+                  release_date={release_date}
+                  marked={false}
+                />
+              </article>
+            )
+          })}
       </section>
 
+      <div className='more'>
+        <button onClick={handleClick}>Load More</button>
+      </div>
       <Footer />
     </>
   )

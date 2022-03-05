@@ -16,6 +16,7 @@
 
 .main .signup-form {
   min-width: 360px;
+  max-width: 360px;
   padding: 2rem;
   text-transform: capitalize;
   letter-spacing: 1px;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useRef } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 
@@ -15,18 +15,18 @@ import whiteMenu from '../../images/white-menu.svg'
 // Styles
 import './Header.css'
 
-const POPULAR = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&sort_by=popularity.desc`
-const TRENDING = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`
-const NOW_PLAYING = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=1`
-const UPCOMING = `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=1`
-const TOP_RATED = `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=1`
-
 const Header = () => {
   const { toggleMode, setToggleMode, fetchMovies } = useGlobalContext()
   const allMenu = useRef(null)
 
   const navigate = useNavigate()
   const { user } = useGlobalAuthContext()
+
+  const POPULAR = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&sort_by=popularity.desc`
+  const TRENDING = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`
+  const NOW_PLAYING = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US`
+  const UPCOMING = `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US`
+  const TOP_RATED = `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US`
 
   const toggle = mode => {
     if (mode === 'white') {
@@ -45,76 +45,46 @@ const Header = () => {
   }
 
   const handlePopular = () => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    })
-
     navigate('/')
 
     setTimeout(() => {
-      fetchMovies(POPULAR, 'popular')
+      fetchMovies(POPULAR, 'popular', 1)
     }, 300)
     allMenu.current.style.transform = 'translateX(100%)'
   }
 
   const handleTrending = () => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    })
-
     navigate('/')
 
     setTimeout(() => {
-      fetchMovies(TRENDING, 'trending')
+      fetchMovies(TRENDING, 'trending', 1)
     }, 300)
     allMenu.current.style.transform = 'translateX(100%)'
   }
 
   const handleNowPlaying = () => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    })
-
     navigate('/')
 
     setTimeout(() => {
-      fetchMovies(NOW_PLAYING, 'now playing')
+      fetchMovies(NOW_PLAYING, 'now playing', 1)
     }, 300)
     allMenu.current.style.transform = 'translateX(100%)'
   }
 
   const handleUpcoming = () => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    })
-
     navigate('/')
 
     setTimeout(() => {
-      fetchMovies(UPCOMING, 'upcoming')
+      fetchMovies(UPCOMING, 'upcoming', 1)
     }, 300)
     allMenu.current.style.transform = 'translateX(100%)'
   }
 
   const handleTopRated = () => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    })
-
     navigate('/')
 
     setTimeout(() => {
-      fetchMovies(TOP_RATED, 'top rated')
+      fetchMovies(TOP_RATED, 'top rated', 1)
     }, 300)
     allMenu.current.style.transform = 'translateX(100%)'
   }
@@ -169,7 +139,7 @@ const Header = () => {
             MovieHub
           </h3>
 
-          {user && (
+          {user.displayName && (
             <h4
               className={
                 toggleMode === 'white'
