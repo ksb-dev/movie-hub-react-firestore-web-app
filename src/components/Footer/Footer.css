@@ -18,7 +18,8 @@
   font-size: 1rem;
   letter-spacing: 1px;
   padding: 0.3rem 0.8rem;
-  border-radius: 50px;
+  border-radius: 3px;
+  background: transparent;
 }
 
 .footer a button:hover {

@@ -25,10 +25,10 @@ const Movies = () => {
   } = useGlobalContext()
 
   const POPULAR = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&sort_by=popularity.desc&page=${page}`
-  const TRENDING = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`
-  const NOW_PLAYING = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=1`
-  const UPCOMING = `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=1`
-  const TOP_RATED = `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=1`
+  const TRENDING = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&page=${page}`
+  const NOW_PLAYING = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=${page}`
+  const UPCOMING = `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=${page}`
+  const TOP_RATED = `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=${page}`
 
   const { user } = useGlobalAuthContext()
 
@@ -48,11 +48,13 @@ const Movies = () => {
 
   const handleClick = () => {
     setPage(page + 1)
+
     if (category === 'popular') fetchMovies(POPULAR, 'popular', page)
-    if (category === 'trending') fetchMovies(TRENDING, 'popular', page)
-    if (category === 'now playing') fetchMovies(NOW_PLAYING, 'popular', page)
-    if (category === 'upcoming') fetchMovies(UPCOMING, 'popular', page)
-    if (category === 'top rated') fetchMovies(TOP_RATED, 'popular', page)
+    if (category === 'trending') fetchMovies(TRENDING, 'trending', page)
+    if (category === 'now playing')
+      fetchMovies(NOW_PLAYING, 'now playing', page)
+    if (category === 'upcoming') fetchMovies(UPCOMING, 'upcoming', page)
+    if (category === 'top rated') fetchMovies(TOP_RATED, 'top rated', page)
   }
 
   return (

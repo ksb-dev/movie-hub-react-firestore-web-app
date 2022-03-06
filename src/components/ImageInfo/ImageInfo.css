@@ -96,9 +96,7 @@
 
 .info .img-more-info .more-info #tagline {
   font-weight: 600;
-  text-align: center;
-  padding: 0.3rem 0.7rem;
-  border-radius: 50px;
+  margin-bottom: 2rem;
 }
 
 .info .img-more-info .more-info h5 {
@@ -117,16 +115,16 @@
 }
 
 .info .img-more-info .more-info .genre-div {
-  margin-top: 0.5rem;
   display: flex;
+  margin-bottom: 2rem;
 }
 
 .info .img-more-info .more-info .genre-div #genre {
   margin-left: 0.5rem;
   padding: 0.2rem 0.5rem;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  border-radius: 50px;
+  border-radius: 3px;
 }
 
 .info .img-more-info .more-info .trailer-btn {
@@ -136,7 +134,11 @@
   letter-spacing: 2px;
   cursor: pointer;
   font-weight: 600;
-  border-radius: 50px;
+  border-radius: 3px;
+  background: red;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
 }
 
 .info .img-more-info .more-info .trailer-btn .fa-play {
@@ -146,6 +148,24 @@
 .info .img-more-info .more-info .trailer-btn:hover {
   transform: scaleX(1.1);
   transition: all 0.3s ease;
+}
+
+.greenMovie {
+  background: green;
+  padding: 0.2rem 0.5rem;
+  color: #fff;
+}
+
+.orangeMovie {
+  background: orange;
+  padding: 0.2rem 0.5rem;
+  color: #fff;
+}
+
+.redMovie {
+  background: red;
+  padding: 0.2rem 0.5rem;
+  color: #fff;
 }
 
 @media screen and (max-width: 1280px) {
@@ -173,10 +193,30 @@
   }
 
   .info .img-more-info .more-info h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .info .img-more-info .more-info #tagline {
+    font-size: 0.8rem;
+  }
+
+  .info .img-more-info .more-info .genre-div #genre {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.3rem;
+  }
+
+  .info .img-more-info .more-info h5 {
+    font-size: 0.9rem;
+  }
+
+  .info .img-more-info .more-info .release,
+  .info .img-more-info .more-info .runtime,
+  .info .img-more-info .more-info .language,
+  .info .img-more-info .more-info .vote {
+    font-size: 0.7rem;
+  }
+
+  .info .img-more-info .more-info .trailer-btn {
     font-size: 0.8rem;
   }
 }
@@ -209,6 +249,7 @@
 
   .info .img-more-info .more-info h3 {
     font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .info .img-more-info .more-info h5 {
@@ -255,7 +296,7 @@
 
 @media screen and (max-width: 550px) {
   .info .img-more-info {
-    padding: 2rem 1rem;
+    padding: 0 0 0 1rem;
   }
 
   .info .img-more-info .more-info {
@@ -264,15 +305,17 @@
 
   .info .img-more-info .more-info #tagline {
     font-size: 0.6rem;
+    margin-bottom: 1.5rem;
   }
 
   .info .img-more-info .more-info .genre-div {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 1.5rem;
   }
 
-  .info .img-more-info .more-info .genre-div #genre {
-    margin-top: 0.5rem;
+  .info .img-more-info .more-info .trailer-btn {
+    margin-bottom: 2rem;
   }
 }
 

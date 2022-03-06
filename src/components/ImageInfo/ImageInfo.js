@@ -15,7 +15,7 @@ const url =
   'https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png'
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
 
-const ImageInfo = ({ movie, getClassByRate, getTrailer, id }) => {
+const ImageInfo = ({ movie, getTrailer, id }) => {
   const { user } = useGlobalAuthContext()
   const { toggleMode } = useGlobalContext()
   const { documents } = useBookmarks('bookmarks')
@@ -59,17 +59,6 @@ const ImageInfo = ({ movie, getClassByRate, getTrailer, id }) => {
 
   const deleteBookmark = movieId => {
     if (documents) {
-      {
-        /*documents.map(document => {
-        if (document.uid === userId) {
-          setBookmark(false)
-          deleteDocument(document.id)
-
-          //console.log(document, response)
-        }
-      )*/
-      }
-
       for (let i = 0; i < documents.length; i++) {
         if (documents[i].number == movieId) {
           //console.log(movieId)
@@ -78,6 +67,16 @@ const ImageInfo = ({ movie, getClassByRate, getTrailer, id }) => {
           break
         }
       }
+    }
+  }
+
+  const getClassByRate = vote => {
+    if (vote >= 8) {
+      return 'greenMovie'
+    } else if (vote >= 5) {
+      return 'orangeMovie'
+    } else {
+      return 'redMovie'
     }
   }
 
@@ -115,13 +114,13 @@ const ImageInfo = ({ movie, getClassByRate, getTrailer, id }) => {
                 addBookmark(id, title, poster_path, release_date, vote_average)
               }
             >
-              <i className='fa-solid fa-plus'></i> Bookmark
+              <i className='fa-solid fa-plus'></i> Wishlist
             </h5>
           )}
 
           {bookmark && (
             <h5 id='remove' onClick={() => deleteBookmark(id)}>
-              <i className='fa-solid fa-trash-can'></i> Bookmark
+              <i className='fa-solid fa-trash-can'></i> Wishlist
             </h5>
           )}
         </div>
@@ -133,11 +132,24 @@ const ImageInfo = ({ movie, getClassByRate, getTrailer, id }) => {
         <div className='more-info'>
           {title && <h3 className='title'>{title}</h3>}
 
-          {tagline && (
-            <h4 className={getClassByRate(vote_average)} id='tagline'>
-              {tagline}
-            </h4>
-          )}
+          {tagline && <h4 id='tagline'>{tagline}</h4>}
+
+          {/* genre-div div */}
+
+          <div className='genre-div'>
+            {genres &&
+              genres.map(genre => {
+                return (
+                  <h6
+                    className={toggleMode === 'white' ? 'btnWhite' : 'btnBlack'}
+                    id='genre'
+                    key={genre.id}
+                  >
+                    {genre.name}
+                  </h6>
+                )
+              })}
+          </div>
 
           {release_date && (
             <h5>
@@ -163,32 +175,8 @@ const ImageInfo = ({ movie, getClassByRate, getTrailer, id }) => {
             </h5>
           )}
 
-          {/* genre-div div */}
-
-          <div className='genre-div'>
-            {genres &&
-              genres.map(genre => {
-                return (
-                  <h6
-                    className={getClassByRate(vote_average)}
-                    id='genre'
-                    key={genre.id}
-                  >
-                    {genre.name}
-                  </h6>
-                )
-              })}
-          </div>
-
           {title && (
-            <button
-              className={
-                toggleMode === 'white'
-                  ? 'trailer-btn btnWhite'
-                  : 'trailer-btn btnBlack'
-              }
-              onClick={() => getTrailer(id)}
-            >
+            <button className='trailer-btn' onClick={() => getTrailer(id)}>
               <i className='fa-solid fa-play'></i>
               play trailer
             </button>

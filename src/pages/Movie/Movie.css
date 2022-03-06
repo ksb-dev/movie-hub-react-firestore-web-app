@@ -46,9 +46,9 @@
 }
 
 .full-page .green {
-  background: green;
+  border: 2px solid green;
   padding: 0.2rem 0.5rem;
-  color: #fff;
+  color: green;
 }
 
 .full-page .orange {

@@ -23,23 +23,17 @@ const Footer = () => {
       }
     >
       <Link to='/search'>
-        <button
-          className={
-            toggleMode === 'white'
-              ? 'search-icon footerBlackBackground'
-              : 'search-icon footerWhiteBackground'
-          }
-        >
+        <button>
           <i
             className={
               toggleMode === 'white'
-                ? 'fa-solid fa-magnifying-glass footerWhiteColor'
-                : 'fa-solid fa-magnifying-glass footerBlackColor'
+                ? 'fa-solid fa-magnifying-glass footerBlackColor'
+                : 'fa-solid fa-magnifying-glass footerWhiteColor'
             }
           ></i>
           <span
             className={
-              toggleMode === 'white' ? ' footerWhiteColor' : ' footerBlackColor'
+              toggleMode === 'white' ? ' footerBlackColor' : ' footerWhiteColor'
             }
           >
             Search
@@ -48,23 +42,17 @@ const Footer = () => {
       </Link>
 
       <Link to='#' className='search-icon' onClick={logout}>
-        <button
-          className={
-            toggleMode === 'white'
-              ? 'footerBlackBackground'
-              : 'footerWhiteBackground'
-          }
-        >
+        <button>
           <i
             className={
               toggleMode === 'white'
-                ? 'fa-solid fa-arrow-left footerWhiteColor'
-                : 'fa-solid fa-arrow-left footerBlackColor'
+                ? 'fa-solid fa-arrow-left footerBlackColor'
+                : 'fa-solid fa-arrow-left footerWhiteColor'
             }
           ></i>
           <span
             className={
-              toggleMode === 'white' ? ' footerWhiteColor' : ' footerBlackColor'
+              toggleMode === 'white' ? ' footerBlackColor' : ' footerWhiteColor'
             }
           >
             Logout

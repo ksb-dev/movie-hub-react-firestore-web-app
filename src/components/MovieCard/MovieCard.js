@@ -99,13 +99,13 @@ const MovieCard = ({ id, poster_path, title, vote_average, release_date }) => {
                 addBookmark(id, title, poster_path, release_date, vote_average)
               }
             >
-              <i className='fa-solid fa-plus'></i> Bookmark
+              <i className='fa-solid fa-plus'></i> Wishlist
             </h5>
           )}
 
           {bookmark && (
             <h5 id='remove' onClick={() => deleteBookmark(id)}>
-              <i className='fa-solid fa-trash-can'></i> Bookmark
+              <i className='fa-solid fa-trash-can'></i> Wishlist
             </h5>
           )}
         </div>
