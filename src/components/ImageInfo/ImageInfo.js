@@ -81,14 +81,21 @@ const ImageInfo = ({ movie, getTrailer, id }) => {
   }
 
   return (
-    <div className='info'>
+    <div
+      className='info'
+      style={{
+        background: `url(${IMG_PATH + backdrop_path})`,
+        backgroundRepeat: 'no-repeat',
+        objectFit: 'cover'
+      }}
+    >
       {/* start of Image + Rating */}
 
       <div
         className={
           toggleMode === 'white'
-            ? 'img-more-info blackColor'
-            : 'img-more-info whiteColor'
+            ? 'img-more-info moreInfoWhiteAlpha blackColor'
+            : 'img-more-info moreInfoBlackAlpha whiteColor'
         }
       >
         <div className='img-rating'>

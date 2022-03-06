@@ -1,5 +1,6 @@
 .info {
   background-size: 100%;
+  margin-bottom: 2rem;
 }
 
 .info .img-more-info {
@@ -169,6 +170,10 @@
 }
 
 @media screen and (max-width: 1280px) {
+  .info {
+    margin-top: -1.5rem;
+  }
+
   .info .img-more-info {
     padding: 2rem 4rem;
   }
@@ -274,6 +279,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .info {
+    margin-top: -2.4rem;
+  }
+
   .info .img-more-info {
     display: flex;
     align-items: flex-start;
@@ -296,7 +305,7 @@
 
 @media screen and (max-width: 550px) {
   .info .img-more-info {
-    padding: 0 0 0 1rem;
+    padding: 1rem 0 0 1rem;
   }
 
   .info .img-more-info .more-info {
@@ -312,6 +321,10 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 1.5rem;
+  }
+
+  .info .img-more-info .more-info .genre-div #genre {
+    margin: 0.5rem 0.5rem 0 0;
   }
 
   .info .img-more-info .more-info .trailer-btn {
