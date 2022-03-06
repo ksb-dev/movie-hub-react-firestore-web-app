@@ -32,6 +32,7 @@
   align-items: flex-start;
   justify-content: center;
   padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 .full-page .single-movie .overview h3 {
