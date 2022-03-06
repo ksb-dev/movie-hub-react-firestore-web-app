@@ -16,19 +16,17 @@
 .more button {
   border: none;
   outline: none;
-  background: tomato;
+  background: orange;
   color: #fff;
   font-size: 1rem;
   letter-spacing: 1px;
-  padding: 6px 10px;
-  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
   cursor: pointer;
 }
 
 .more button:hover {
-  background: transparent;
-  color: tomato;
-  border: 2px solid tomato;
+  transform: scaleX(1.1);
   transition: all 0.3s ease;
 }
 

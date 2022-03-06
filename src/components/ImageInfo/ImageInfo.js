@@ -181,7 +181,14 @@ const ImageInfo = ({ movie, getClassByRate, getTrailer, id }) => {
           </div>
 
           {title && (
-            <button className='trailer-btn' onClick={() => getTrailer(id)}>
+            <button
+              className={
+                toggleMode === 'white'
+                  ? 'trailer-btn btnWhite'
+                  : 'trailer-btn btnBlack'
+              }
+              onClick={() => getTrailer(id)}
+            >
               <i className='fa-solid fa-play'></i>
               play trailer
             </button>

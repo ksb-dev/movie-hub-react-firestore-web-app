@@ -29,7 +29,7 @@ const Search = () => {
       <Header />
       <div className='search'>
         <form
-          className='search-form blackBottomBorder'
+          className='search-form'
           onSubmit={e => {
             e.preventDefault()
             setQuery('')
@@ -41,7 +41,7 @@ const Search = () => {
             className='form-input'
             value={query}
             onChange={e => setQuery(e.target.value)}
-            placeholder='Search'
+            placeholder='Enter your search here'
           />
         </form>
       </div>

@@ -1,8 +1,14 @@
 .cat {
-  padding-top: 7rem;
+  padding-top: 9rem;
   padding-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 576px) {
+  .cat {
+    padding-top: 6rem;
+  }
 }

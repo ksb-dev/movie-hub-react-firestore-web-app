@@ -112,7 +112,7 @@
 }
 
 .one-movie .movie-info .rating-bookmark #remove:hover {
-  background: rgb(255, 63, 63);
+  background: rgb(255, 79, 79);
   transition: color 0.3s ease;
 }
 

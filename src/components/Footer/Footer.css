@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 5rem;
+  padding: 0.65rem 5rem;
   box-shadow: 1px 1px 10px #000;
 }
 
@@ -19,6 +19,11 @@
   letter-spacing: 1px;
   padding: 0.3rem 0.8rem;
   border-radius: 50px;
+}
+
+.footer a button:hover {
+  transform: scaleX(1.1);
+  transition: all 0.3s ease;
 }
 
 .footer a .search-icon {
@@ -60,7 +65,7 @@
 @media only screen and (max-width: 576px) {
   .footer {
     justify-content: center;
-    height: 35px;
+    height: 40px;
   }
   .footer a button {
     font-size: 0.8rem;

@@ -144,7 +144,7 @@
 @media only screen and (max-width: 576px) {
   .header {
     padding-bottom: 0;
-    height: 35px;
+    height: 40px;
   }
   .header .name-mode-menu {
     display: flex;
