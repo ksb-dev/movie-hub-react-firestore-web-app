@@ -75,14 +75,14 @@
   color: #fff;
 }
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 786px) {
   .all .one-movie {
     width: 150px;
     margin: 0.5rem;
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media screen and (max-width: 640px) {
   .category {
     padding-top: 3rem;
   }
@@ -93,7 +93,5 @@
 
   .all .one-movie {
     margin: 0.5rem;
-    margin-left: 0;
-    width: 100px;
   }
 }

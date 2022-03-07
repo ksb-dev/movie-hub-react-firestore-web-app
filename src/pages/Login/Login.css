@@ -81,13 +81,3 @@
   letter-spacing: 1px;
   cursor: pointer;
 }
-
-@media only screen and (max-width: 567px) {
-  .main .title {
-    left: 4.5rem;
-  }
-  .main .login-form {
-    right: 1rem;
-    width: 340px;
-  }
-}

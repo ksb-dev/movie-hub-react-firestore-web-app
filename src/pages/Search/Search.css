@@ -42,7 +42,7 @@
   color: transparent;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 640px) {
   .search {
     top: 2.5rem;
   }

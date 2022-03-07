@@ -6,6 +6,7 @@
 
 .cast-div h3 {
   font-size: 1.5rem;
+  margin-bottom: 0;
 }
 
 .cast-div .section-center {
@@ -66,7 +67,63 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
+  .cast-div .section-center .actor-img-name .person-img {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .cast-div {
+    padding-left: 2rem;
+  }
+
+  .cast-div h3 {
+    font-size: 1rem;
+  }
+
+  .cast-div .section-center .actor-img-name .person-img {
+    height: 250px;
+  }
+
+  .cast-div .section-center .actor-img-name .character-name h6 {
+    font-size: 0.5rem;
+    font-weight: 400;
+  }
+  .cast-div .section-center .actor-img-name .character-name h5 {
+    font-size: 0.6rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cast-div {
+    padding-left: 1rem;
+  }
+
+  .cast-div h3 {
+    font-size: 1rem;
+  }
+
+  .cast-div .section-center .actor-img-name {
+    margin: 0.2rem;
+  }
+
+  .cast-div .section-center .actor-img-name .person-img {
+    height: 200px;
+  }
+
+  .cast-div .section-center .actor-img-name .character-name h6 {
+    font-size: 0.4rem;
+    font-weight: 400;
+  }
+  .cast-div .section-center .actor-img-name .character-name h5 {
+    font-size: 0.5rem;
+    font-weight: 500;
+  }
+}
+
+/*@media screen and (max-width: 900px) {
   .cast-div {
     padding-left: 2rem;
   }
@@ -126,4 +183,4 @@
 
 .whiteBackground {
   background: rgb(220, 220, 220);
-}
+}*/

@@ -110,7 +110,7 @@
   color: #fff;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 640px) {
   .full-detail .person-detail {
     margin: 0rem;
   }

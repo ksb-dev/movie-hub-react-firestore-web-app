@@ -63,7 +63,7 @@
   color: #fff;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 640px) {
   .footer {
     justify-content: center;
     height: 40px;

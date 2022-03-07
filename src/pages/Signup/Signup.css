@@ -64,13 +64,3 @@
   letter-spacing: 1px;
   cursor: pointer;
 }
-
-@media only screen and (max-width: 576px) {
-  .main .title {
-    left: 4.5rem;
-  }
-  .main .signup-form {
-    right: 1rem;
-    width: 340px;
-  }
-}

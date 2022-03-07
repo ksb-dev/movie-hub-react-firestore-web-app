@@ -93,22 +93,6 @@
   color: #fff;
 }
 
-.whiteMoreinfoRight {
-  background: linear-gradient(
-    to right,
-    rgba(128, 128, 128, 0.9),
-    rgba(255, 255, 255, 0.9)
-  );
-}
-
-.blackMoreinfoRight {
-  background: linear-gradient(
-    to right,
-    rgba(90, 90, 90, 0.9),
-    rgba(31, 31, 31, 0.9)
-  );
-}
-
 @media screen and (max-width: 1280px) {
   .full-page .single-movie .overview {
     width: 100vw;
@@ -116,13 +100,7 @@
   }
 }
 
-@media screen and (max-width: 1020px) {
-  .full-page .home-mode {
-    padding: 0.5rem 2.5rem;
-  }
-}
-
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 786px) {
   .full-page .single-movie .overview {
     padding: 1rem 2rem;
   }
@@ -135,24 +113,12 @@
     font-size: 0.8rem;
     line-height: 1.5rem;
   }
-
-  .full-page .single-movie .youtube {
-    width: 550px;
-    height: 300px;
-  }
 }
 
-@media only screen and (max-width: 800px) {
-  .full-page .single-movie {
-    /*padding: 2.5rem;*/
-    padding-bottom: 0;
-    margin-top: 0rem;
-  }
-}
-
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 640px) {
   .full-page .single-movie .overview {
     width: 100vw;
     padding: 1rem;
+    margin-bottom: 1rem;
   }
 }
