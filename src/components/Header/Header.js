@@ -18,6 +18,7 @@ import './Header.css'
 const Header = () => {
   const { toggleMode, setToggleMode, fetchMovies } = useGlobalContext()
   const allMenu = useRef(null)
+  const back = useRef(null)
 
   const navigate = useNavigate()
   const { user } = useGlobalAuthContext()
@@ -37,11 +38,13 @@ const Header = () => {
   }
 
   const hideMenu = () => {
-    allMenu.current.style.transform = 'translateX(100%)'
+    allMenu.current.style.transform = 'translateY(-100%)'
+    back.current.style.transform = 'translateY(-100%)'
   }
 
   const showMenu = () => {
-    allMenu.current.style.transform = 'translateX(0%)'
+    allMenu.current.style.transform = 'translateY(0%)'
+    back.current.style.transform = 'translateY(0%)'
   }
 
   const handlePopular = () => {
@@ -50,7 +53,8 @@ const Header = () => {
     setTimeout(() => {
       fetchMovies(POPULAR, 'popular', 1)
     }, 300)
-    allMenu.current.style.transform = 'translateX(100%)'
+    allMenu.current.style.transform = 'translateY(-100%)'
+    back.current.style.transform = 'translateY(-100%)'
   }
 
   const handleTrending = () => {
@@ -59,7 +63,8 @@ const Header = () => {
     setTimeout(() => {
       fetchMovies(TRENDING, 'trending', 1)
     }, 300)
-    allMenu.current.style.transform = 'translateX(100%)'
+    allMenu.current.style.transform = 'translateY(-100%)'
+    back.current.style.transform = 'translateY(-100%)'
   }
 
   const handleNowPlaying = () => {
@@ -68,7 +73,8 @@ const Header = () => {
     setTimeout(() => {
       fetchMovies(NOW_PLAYING, 'now playing', 1)
     }, 300)
-    allMenu.current.style.transform = 'translateX(100%)'
+    allMenu.current.style.transform = 'translateY(-100%)'
+    back.current.style.transform = 'translateY(-100%)'
   }
 
   const handleUpcoming = () => {
@@ -77,7 +83,8 @@ const Header = () => {
     setTimeout(() => {
       fetchMovies(UPCOMING, 'upcoming', 1)
     }, 300)
-    allMenu.current.style.transform = 'translateX(100%)'
+    allMenu.current.style.transform = 'translateY(-100%)'
+    back.current.style.transform = 'translateY(-100%)'
   }
 
   const handleTopRated = () => {
@@ -86,7 +93,8 @@ const Header = () => {
     setTimeout(() => {
       fetchMovies(TOP_RATED, 'top rated', 1)
     }, 300)
-    allMenu.current.style.transform = 'translateX(100%)'
+    allMenu.current.style.transform = 'translateY(-100%)'
+    back.current.style.transform = 'translateY(-100%)'
   }
 
   return (
@@ -94,35 +102,48 @@ const Header = () => {
       {/* movie categories */}
 
       <div
-        ref={allMenu}
+        ref={back}
         className={
           toggleMode === 'white'
-            ? 'all-menu menuWhiteBackground'
-            : 'all-menu menuBlackBackground'
+            ? 'backMenu backWhiteBackground'
+            : 'backMenu backBlackBackground'
         }
       >
-        <ul
+        <div
+          ref={allMenu}
           className={
             toggleMode === 'white'
-              ? 'all-menu-list headerBlackColor'
-              : 'all-menu-list headerWhiteColor'
+              ? 'all-menu menuWhiteBackground'
+              : 'all-menu menuBlackBackground'
           }
         >
-          <li>
+          <ul
+            className={
+              toggleMode === 'white'
+                ? 'all-menu-list headerBlackColor'
+                : 'all-menu-list headerWhiteColor'
+            }
+          >
+            <li className='bookmarks'>
+              <Link to='/bookmarks'>Wishlist</Link>
+            </li>
+            <li onClick={handlePopular}>Popular</li>
+            <li onClick={handleTrending}>Trending</li>
+            <li onClick={handleNowPlaying}>Now Playing</li>
+            <li onClick={handleUpcoming}>Upcoming</li>
+            <li onClick={handleTopRated}>Top Rated</li>
+          </ul>
+          <p
+            className={
+              toggleMode === 'white' ? 'headerBlackColor' : 'headerWhiteColor'
+            }
+          >
             <i
               className='fa-solid fa-circle-xmark fa-2x'
               onClick={hideMenu}
             ></i>
-          </li>
-          <li className='bookmarks'>
-            <Link to='/bookmarks'>Wishlist</Link>
-          </li>
-          <li onClick={handlePopular}>Popular</li>
-          <li onClick={handleTrending}>Trending</li>
-          <li onClick={handleNowPlaying}>Now Playing</li>
-          <li onClick={handleUpcoming}>Upcoming</li>
-          <li onClick={handleTopRated}>Top Rated</li>
-        </ul>
+          </p>
+        </div>
       </div>
 
       {/* Name, search, mode, menu */}
