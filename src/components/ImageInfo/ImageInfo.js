@@ -139,7 +139,11 @@ const ImageInfo = ({ movie, getTrailer, id }) => {
         <div className='more-info'>
           {title && <h3 className='title'>{title}</h3>}
 
-          {tagline && <h4 id='tagline'>{tagline}</h4>}
+          {tagline && (
+            <h4 className={getClassByRate(vote_average)} id='tagline'>
+              {tagline}
+            </h4>
+          )}
 
           {/* genre-div div */}
 
