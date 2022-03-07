@@ -105,6 +105,10 @@
     font-size: 1rem;
   }
 
+  .cast-div .section-center {
+    width: 100vw;
+  }
+
   .cast-div .section-center .actor-img-name {
     margin: 0.2rem;
   }
