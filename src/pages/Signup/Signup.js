@@ -73,7 +73,9 @@ export default function Signup () {
           </button>
         )}
 
-        <Link to='/login'>Login</Link>
+        <h5>
+          Have an acoount ? <Link to='/login'>Login</Link>
+        </h5>
 
         {error && <p>{error}</p>}
       </form>

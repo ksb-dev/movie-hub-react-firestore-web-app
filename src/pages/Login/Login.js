@@ -61,7 +61,9 @@ export default function Login () {
           <button className='btn'>Login</button>
         )}
 
-        <Link to='/signup'>Signup</Link>
+        <h5>
+          Don't have an account ? <Link to='/signup'>Signup</Link>
+        </h5>
 
         {error && <h4>{error}</h4>}
       </form>

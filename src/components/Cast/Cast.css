@@ -75,21 +75,25 @@
     font-size: 1rem;
   }
 
+  .cast-div .section-center .actor-img-name {
+    margin: 0 0.2rem;
+  }
+
   .cast-div .section-center .actor-img-name .person-img {
-    height: 250px;
+    height: 200px;
   }
 
   .cast-div .section-center .actor-img-name .character-name {
-    padding: 0.2rem 0.5rem;
+    padding: 0rem 0.5rem;
   }
 
   .cast-div .section-center .actor-img-name .character-name h6 {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 300;
   }
 
   .cast-div .section-center .actor-img-name .character-name h5 {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 500;
   }
 }

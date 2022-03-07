@@ -25,6 +25,14 @@ const Bookmarks = ({ movies }) => {
   //console.log(bookmarks)
 
   useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }, [])
+
+  useEffect(() => {
     if (!user) {
       navigate('/login')
     }
@@ -71,7 +79,17 @@ const Bookmarks = ({ movies }) => {
           }}
         >
           Wishlist{' '}
-          <span style={{ paddingLeft: '0.5rem' }}>{bookmarks.length}</span>
+          <span
+            style={{
+              marginLeft: '0.5rem',
+              background: '#fff',
+              color: 'tomato',
+              borderRadius: '100%',
+              padding: '0 0.3rem'
+            }}
+          >
+            {bookmarks.length}
+          </span>
         </span>
       </h4>
 
