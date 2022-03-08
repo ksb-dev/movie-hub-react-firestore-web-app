@@ -13,7 +13,7 @@ import Bookmarks from './pages/Bookmarks/Bookmarks'
 
 function App () {
   const { toggleMode, movies } = useGlobalContext()
-  const { authIsReady, user } = useGlobalAuthContext()
+  const { authIsReady } = useGlobalAuthContext()
 
   return (
     <div className={toggleMode === 'white' ? 'view white' : 'view black'}>

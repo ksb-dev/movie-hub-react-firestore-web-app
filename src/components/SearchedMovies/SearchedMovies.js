@@ -26,7 +26,17 @@ const SearchedMovies = () => {
     <>
       {/* error */}
 
-      {error.show && <div className='err'>{error.msg}</div>}
+      {error.show && (
+        <div
+          className={
+            toggleMode === 'white'
+              ? 'err blackColorCategory'
+              : 'err whiteColorCategory'
+          }
+        >
+          {error.msg}
+        </div>
+      )}
 
       {/* movie category*/}
 

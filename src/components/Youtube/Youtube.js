@@ -58,9 +58,23 @@ const Youtube = ({ youtube_div, off, trailerUrl, setTrailerUrl }) => {
       {!trailerUrl && (
         <>
           <button className='close-btn' ref={off} onClick={() => close()}>
-            <i className='fa-solid fa-circle-xmark fa-3x'></i>
+            <i
+              className={
+                toggleMode === 'white'
+                  ? 'fa-solid fa-circle-xmark fa-3x blackColor'
+                  : 'fa-solid fa-circle-xmark fa-3x whiteColor'
+              }
+            ></i>
           </button>
-          <div className='trailer-not-found'>trailer not found</div>
+          <div
+            className={
+              toggleMode === 'white'
+                ? 'trailer-not-found  blackColor'
+                : 'trailer-not-found  whiteColor'
+            }
+          >
+            trailer not found
+          </div>
         </>
       )}
     </div>

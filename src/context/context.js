@@ -59,8 +59,6 @@ const AppProvider = ({ children }) => {
   }
 
   const fetchMovies = async (url, category, page) => {
-    console.log(url)
-    console.log(page)
     if (page === 1) {
       window.scroll({
         top: 0,

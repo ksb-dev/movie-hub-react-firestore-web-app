@@ -46,6 +46,7 @@ const Bookmarks = ({ movies }) => {
         if (document.uid === user.uid) {
           res.push(document)
         }
+        return 0
       })
 
       setBookmarks(res)

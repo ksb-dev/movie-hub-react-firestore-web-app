@@ -32,16 +32,16 @@ const ImageInfo = ({ movie, getTrailer, id }) => {
     tagline,
     vote_average,
     vote_count,
-    original_language,
-    backdrop_path
+    original_language
   } = movie
 
   useEffect(() => {
     if (user && documents) {
       documents.map(document => {
         if (document.poster_path === poster_path && document.uid === user.uid) {
-          setBookmark(true)
+          return setBookmark(true)
         }
+        return 0
       })
     }
   }, [user, documents, poster_path])
@@ -188,7 +188,7 @@ const ImageInfo = ({ movie, getTrailer, id }) => {
               }
               onClick={() => getTrailer(id)}
             >
-              <i class='fa-solid fa-circle-play fa-3x'></i>
+              <i className='fa-solid fa-circle-play fa-3x'></i>
             </button>
           )}
 
