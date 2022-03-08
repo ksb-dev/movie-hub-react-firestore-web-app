@@ -180,9 +180,15 @@ const ImageInfo = ({ movie, getTrailer, id }) => {
           )}
 
           {title && (
-            <button className='trailer-btn' onClick={() => getTrailer(id)}>
-              <i className='fa-solid fa-play'></i>
-              play trailer
+            <button
+              className={
+                toggleMode === 'white'
+                  ? 'trailer-btn whiteBtn'
+                  : 'trailer-btn blackBtn'
+              }
+              onClick={() => getTrailer(id)}
+            >
+              <i class='fa-solid fa-circle-play fa-3x'></i>
             </button>
           )}
 

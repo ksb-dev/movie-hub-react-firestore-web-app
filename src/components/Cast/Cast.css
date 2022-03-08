@@ -126,12 +126,12 @@
   }
 
   .cast-div .section-center .actor-img-name .character-name h6 {
-    font-size: 0.4rem;
-    font-weight: 400;
+    font-size: 0.5rem;
+    font-weight: 300;
   }
   .cast-div .section-center .actor-img-name .character-name h5 {
-    font-size: 0.5rem;
-    font-weight: 500;
+    font-size: 0.6rem;
+    font-weight: 400;
   }
 }
 

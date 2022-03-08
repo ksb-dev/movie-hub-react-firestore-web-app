@@ -55,7 +55,11 @@
   }
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 640px) {
+  .youtube-div .trailer-not-found {
+    font-size: 1rem;
+  }
+
   .youtube-div .youtube {
     width: 300px;
     height: 200px;
