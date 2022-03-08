@@ -235,6 +235,10 @@
 }
 
 @media only screen and (max-width: 786px) {
+  .info {
+    background-image: none;
+  }
+
   .info .img-more-info .img-rating img {
     width: 150px;
   }
@@ -310,11 +314,11 @@
 }
 
 .moreInfoBlackAlpha {
-  background: rgba(90, 90, 90, 0);
+  background: rgba(90, 90, 90, 0.9);
 }
 
 .moreInfoWhiteAlpha {
-  background: rgba(220, 220, 220, 0.8);
+  background: rgba(220, 220, 220, 0.9);
 }
 
 .blackColor {

@@ -32,7 +32,8 @@ const ImageInfo = ({ movie, getTrailer, id }) => {
     tagline,
     vote_average,
     vote_count,
-    original_language
+    original_language,
+    backdrop_path
   } = movie
 
   useEffect(() => {
@@ -81,14 +82,17 @@ const ImageInfo = ({ movie, getTrailer, id }) => {
   }
 
   return (
-    <div className='info'>
+    <div
+      className='info'
+      style={{ backgroundImage: `url(${IMG_PATH + backdrop_path})` }}
+    >
       {/* start of Image + Rating */}
 
       <div
         className={
           toggleMode === 'white'
-            ? 'img-more-info blackColor'
-            : 'img-more-info whiteColor'
+            ? 'img-more-info moreInfoWhiteAlpha blackColor'
+            : 'img-more-info moreInfoBlackAlpha whiteColor'
         }
       >
         <div className='img-rating'>

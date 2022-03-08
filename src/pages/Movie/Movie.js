@@ -126,15 +126,7 @@ const Movie = () => {
   }
 
   return (
-    <div
-      className='full-page'
-      style={{
-        background: `url(${IMG_PATH + poster_path})`,
-        backgroundRepeat: 'no-repeat',
-        objectFit: 'cover',
-        width: '100vw'
-      }}
-    >
+    <div className='full-page'>
       <Header />
 
       {/* Single Movie */}
