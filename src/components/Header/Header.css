@@ -30,7 +30,7 @@
   justify-content: center;
 }
 
-.all-menu .all-menu-list {
+.backMenu .all-menu .all-menu-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -39,7 +39,7 @@
   margin: 0;
 }
 
-.all-menu .all-menu-list li {
+.backMenu .all-menu .all-menu-list li {
   margin: 1rem 2rem;
   font-size: 1rem;
   letter-spacing: 2px;
@@ -47,12 +47,12 @@
   font-weight: 400;
 }
 
-.all-menu .all-menu-list li:hover {
+.backMenu .all-menu .all-menu-list li:hover {
   transform: scale(1.1);
   transition: all 0.3s ease;
 }
 
-.all-menu .all-menu-list li.bookmarks a {
+.backMenu .all-menu .all-menu-list li.bookmarks a {
   background: tomato;
   color: #fff;
   padding: 0.2rem 0.5rem;
@@ -71,7 +71,6 @@
   justify-content: center;
   padding: 0.8rem 0 0 0;
   margin: 0 auto;
-  box-shadow: 1px 1px 5px #000;
 }
 
 .header .name-mode-menu {
@@ -161,20 +160,20 @@
 }
 
 @media only screen and (max-width: 640px) {
-  .all-menu {
+  .backMenu .all-menu {
     display: flex;
     flex-direction: column-reverse;
     padding-top: 1rem;
   }
 
-  .all-menu .all-menu-list {
+  .backMenu .all-menu .all-menu-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .all-menu .all-menu-list li {
+  .backMenu .all-menu .all-menu-list li {
     margin-top: 1rem;
     font-size: 1rem;
     font-weight: 400;

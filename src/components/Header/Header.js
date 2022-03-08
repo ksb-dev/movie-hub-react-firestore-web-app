@@ -133,6 +133,7 @@ const Header = () => {
             <li onClick={handleUpcoming}>Upcoming</li>
             <li onClick={handleTopRated}>Top Rated</li>
           </ul>
+
           <p
             className={
               toggleMode === 'white' ? 'headerBlackColor' : 'headerWhiteColor'

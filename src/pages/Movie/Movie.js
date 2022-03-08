@@ -154,20 +154,28 @@ const Movie = () => {
             trailerUrl={trailerUrl}
           />
 
+          <h6
+            className={toggleMode === 'white' ? 'hrlineBlack' : 'hrlineWhite'}
+          ></h6>
+
           {/* Overview */}
 
           {overview && (
             <div
               className={
                 toggleMode === 'white'
-                  ? 'overview whiteBackground blackColor'
-                  : 'overview blackBackground whiteColor'
+                  ? 'overview blackColor'
+                  : 'overview whiteColor'
               }
             >
               <h3>Overview</h3>
               <h4>{overview}</h4>
             </div>
           )}
+
+          <h6
+            className={toggleMode === 'white' ? 'hrlineBlack' : 'hrlineWhite'}
+          ></h6>
 
           {/* Cast */}
 
