@@ -45,7 +45,7 @@
 .full-page .single-movie .overview {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -53,6 +53,7 @@
 
 .full-page .single-movie .overview h3 {
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .full-page .single-movie .overview h4 {
