@@ -19,10 +19,18 @@ const Search = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }, [])
+
+  useEffect(() => {
     if (!user) {
       navigate('/')
     }
-  })
+  }, [user, navigate])
 
   return (
     <>

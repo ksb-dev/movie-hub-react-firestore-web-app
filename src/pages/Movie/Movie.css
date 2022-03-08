@@ -134,7 +134,9 @@
 @media screen and (max-width: 640px) {
   .full-page .single-movie .overview {
     width: 100vw;
-    padding: 1rem;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

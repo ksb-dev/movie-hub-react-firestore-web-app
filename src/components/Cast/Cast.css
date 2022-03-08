@@ -99,6 +99,10 @@
 @media screen and (max-width: 640px) {
   .cast-div {
     padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .cast-div h3 {
@@ -106,7 +110,8 @@
   }
 
   .cast-div .section-center {
-    width: 95vw;
+    width: 90vw;
+    margin: 0 auto;
   }
 
   .cast-div .section-center .actor-img-name {
