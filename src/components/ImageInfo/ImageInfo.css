@@ -151,20 +151,6 @@
   animation: scaling 1s ease infinite;
 }
 
-.whiteBtn {
-  color: rgb(90, 90, 90);
-  background: #fff;
-}
-
-.blackBtn {
-  color: #fff;
-  background: rgb(90, 90, 90);
-}
-
-.info .img-more-info .more-info .trailer-btn .fa-circle-play {
-  /*margin-right: 0.5rem;*/
-}
-
 .info .img-more-info .more-info .trailer-btn:hover {
   transform: scale(1.1);
   transition: all 0.3s ease;
@@ -309,10 +295,6 @@
   .info .img-more-info .more-info .genre-div #genre {
     margin: 0.5rem 0.5rem 0 0;
   }
-
-  .info .img-more-info .more-info .trailer-btn {
-    font-size: 0.6rem;
-  }
 }
 
 .moreInfoBlackAlpha {
@@ -323,22 +305,20 @@
   background: rgba(220, 220, 220, 0.9);
 }
 
-.blackColor {
+.blackMovieColor {
   color: rgb(90, 90, 90);
 }
 
-.whiteColor {
-  color: #fff;
+.whiteMovieColor {
+  color: rgb(220, 220, 220);
 }
 
-.btnWhite {
-  background: transparent;
-  border: 1px solid rgb(90, 90, 90);
-  color: rgb(90, 90, 90);
+.whiteBtn {
+  color: #000;
+  background: #fff;
 }
 
-.btnBlack {
-  background: transparent;
-  border: 2px solid #fff;
+.blackBtn {
   color: #fff;
+  background: #000;
 }

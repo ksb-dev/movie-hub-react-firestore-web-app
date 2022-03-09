@@ -91,8 +91,8 @@ const ImageInfo = ({ movie, getTrailer, id }) => {
       <div
         className={
           toggleMode === 'white'
-            ? 'img-more-info moreInfoWhiteAlpha blackColor'
-            : 'img-more-info moreInfoBlackAlpha whiteColor'
+            ? 'img-more-info moreInfoWhiteAlpha blackMovieColor'
+            : 'img-more-info moreInfoBlackAlpha whiteMovieColor'
         }
       >
         <div className='img-rating'>
