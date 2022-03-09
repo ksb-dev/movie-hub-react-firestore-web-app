@@ -34,8 +34,8 @@
 .full-detail .person-detail .person-image-birth .img {
   width: 250px;
   margin: 0 1rem 1rem 1rem;
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px #000;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px #000;
 }
 
 .full-detail .person-detail .person-image-birth .birth {
