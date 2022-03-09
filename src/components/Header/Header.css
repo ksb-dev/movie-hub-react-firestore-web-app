@@ -140,11 +140,12 @@
 }
 
 .headerWhiteBackgroundAlpha {
-  background: rgba(220, 220, 220, 1);
+  background: rgba(220, 220, 220, 0.9);
 }
 
 .headerBlackBackgroundAlpha {
-  background: rgb(90, 90, 90, 1);
+  background: rgb(90, 90, 90, 0.9);
+  /*box-shadow: 1px 1px 1px rgb(220, 220, 220);*/
 }
 
 .headerBlackColor {

@@ -47,11 +47,11 @@
 }
 
 .footerWhiteBackgroundAlpha {
-  background: rgba(220, 220, 220, 1);
+  background: rgba(220, 220, 220, 0.9);
 }
 
 .footerBlackBackgroundAlpha {
-  background: rgba(90, 90, 90, 1);
+  background: rgba(90, 90, 90, 0.9);
 }
 
 .footerBlackColor {
