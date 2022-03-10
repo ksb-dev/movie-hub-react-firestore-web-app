@@ -39,7 +39,6 @@ const Movie = () => {
   } = useGlobalContext()
 
   const GET_DETAILS = `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US`
-  const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
   const GET_CAST = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US`
 
   const off = useRef(null)
@@ -99,7 +98,7 @@ const Movie = () => {
     )
   }
 
-  const { poster_path, overview } = movie
+  const { overview } = movie
 
   const getTrailer = async id => {
     youtube_div.current.style.transform = 'translateY(0%)'

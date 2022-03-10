@@ -6,7 +6,10 @@ import { useNavigate, Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context/context'
 import { useGlobalAuthContext } from '../../context/AuthContext'
 
-// Components
+// Hooks
+import { useLogOut } from '../../hooks/useLogOut'
+
+// SVG
 import mode from '../../images/mode.svg'
 import menu from '../../images/menu.svg'
 import whiteMode from '../../images/white-mode.svg'
@@ -17,6 +20,8 @@ import './Header.css'
 
 const Header = () => {
   const { toggleMode, setToggleMode, fetchMovies, setPage } = useGlobalContext()
+  const { logout } = useLogOut()
+
   const allMenu = useRef(null)
   const back = useRef(null)
 
@@ -160,11 +165,11 @@ const Header = () => {
         }
       >
         <div className='name-mode-menu'>
-          <h3 className='name' onClick={handlePopular}>
+          {/*<h3 className='name' onClick={handlePopular}>
             MovieHub
-          </h3>
+      </h3>*/}
 
-          {user && (
+          {/*{user && (
             <h4
               className={
                 toggleMode === 'white' ? 'headerBlackColor' : 'headerWhiteColor'
@@ -176,25 +181,90 @@ const Header = () => {
                 'Welcome'
               )}
             </h4>
-          )}
+              )}*/}
+
+          <Link to='/search'>
+            <button>
+              <i
+                className={
+                  toggleMode === 'white'
+                    ? 'fa-solid fa-magnifying-glass footerBlackColor'
+                    : 'fa-solid fa-magnifying-glass footerWhiteColor'
+                }
+              ></i>
+              <span
+                className={
+                  toggleMode === 'white'
+                    ? ' footerBlackColor'
+                    : ' footerWhiteColor'
+                }
+              >
+                Search
+              </span>
+            </button>
+          </Link>
+
+          <Link to='#' className='search-icon' onClick={logout}>
+            <button>
+              <i
+                className={
+                  toggleMode === 'white'
+                    ? 'fa-solid fa-circle-user footerBlackColor'
+                    : 'fa-solid fa-circle-user footerWhiteColor'
+                }
+              ></i>
+              <span
+                className={
+                  toggleMode === 'white'
+                    ? ' footerBlackColor'
+                    : ' footerWhiteColor'
+                }
+              >
+                {user && user.displayName !== null && user.displayName}
+              </span>
+            </button>
+          </Link>
 
           <div className='mode-menu'>
-            <h3>
-              <img
-                src={toggleMode === 'white' ? mode : whiteMode}
-                alt=''
-                className='mode'
-                onClick={() => toggle(toggleMode)}
-              />
-            </h3>
-            <h3>
-              <img
-                src={toggleMode === 'white' ? menu : whiteMenu}
-                alt=''
-                className='menu'
+            {toggleMode === 'white' ? (
+              <p className='mode'>
+                <i
+                  onClick={() => toggle(toggleMode)}
+                  className='fa-solid fa-moon blackModeHome'
+                ></i>
+              </p>
+            ) : (
+              <p>
+                <i
+                  onClick={() => toggle(toggleMode)}
+                  className='fa-solid fa-sun whiteModeHome'
+                ></i>
+              </p>
+            )}
+
+            <p>
+              <Link to='/'>
+                <i
+                  className={
+                    toggleMode === 'white'
+                      ? 'fa-solid fa-house headerBlackColor'
+                      : 'fa-solid fa-house headerWhiteColor'
+                  }
+                  id='home'
+                ></i>
+              </Link>
+            </p>
+
+            <p>
+              <i
+                className={
+                  toggleMode === 'white'
+                    ? 'fa fa-bars headerBlackColor'
+                    : 'fa fa-bars headerWhiteColor'
+                }
                 onClick={showMenu}
-              />
-            </h3>
+              ></i>
+            </p>
           </div>
         </div>
       </div>

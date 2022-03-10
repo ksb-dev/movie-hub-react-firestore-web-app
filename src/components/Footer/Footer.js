@@ -22,7 +22,8 @@ const Footer = () => {
           : 'footer footerBlackBackground footerWhiteColor'
       }
     >
-      <Link to='/search'>
+      <h1 className='name'>MovieHub</h1>
+      {/*<Link to='/search'>
         <button>
           <i
             className={
@@ -58,7 +59,7 @@ const Footer = () => {
             Logout
           </span>
         </button>
-      </Link>
+          </Link>*/}
     </div>
   )
 }

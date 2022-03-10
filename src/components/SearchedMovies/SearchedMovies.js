@@ -15,7 +15,7 @@ const SearchedMovies = () => {
     isLoading,
     searchTerm,
     toggleMode,
-    error
+    searchError
   } = useGlobalContext()
 
   if (isLoading) {
@@ -26,7 +26,7 @@ const SearchedMovies = () => {
     <>
       {/* error */}
 
-      {error.show && (
+      {searchError.show && (
         <div
           className={
             toggleMode === 'white'
@@ -34,7 +34,7 @@ const SearchedMovies = () => {
               : 'err whiteColorCategory'
           }
         >
-          {error.msg}
+          {searchError.msg}
         </div>
       )}
 

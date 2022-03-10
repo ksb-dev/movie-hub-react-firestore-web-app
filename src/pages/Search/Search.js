@@ -1,19 +1,21 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+// Context
 import { useGlobalContext } from '../../context/context'
 import { useGlobalAuthContext } from '../../context/AuthContext'
 
-import Header from '../../components/Header/Header'
+// Components
 import SearchedMovies from '../../components/SearchedMovies/SearchedMovies'
 import Footer from '../../components/Footer/Footer'
+import Header from '../../components/Header/Header'
 
 import './Search.css'
 
 const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&query="`
 
 const Search = () => {
-  const { query, setQuery, searchMovies } = useGlobalContext()
+  const { query, setQuery, searchMovies, toggleMode } = useGlobalContext()
   const { user } = useGlobalAuthContext()
 
   const navigate = useNavigate()

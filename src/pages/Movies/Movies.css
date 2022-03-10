@@ -1,5 +1,5 @@
 .category {
-  padding-top: 5rem;
+  padding-top: 9rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +82,7 @@
 
 @media screen and (max-width: 640px) {
   .category {
-    padding-top: 3rem;
+    padding-top: 8rem;
   }
 
   .all {

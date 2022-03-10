@@ -12,6 +12,7 @@ const AppProvider = ({ children }) => {
   const [toggleMode, setToggleMode] = useState('white')
   const [category, setCategory] = useState('')
   const [searchedMovies, setSearchedMovies] = useState([])
+  const [searchError, setSearchError] = useState({ show: false, msg: '' })
   const [searchTerm, setSearchTerm] = useState('')
   let [page, setPage] = useState(2)
 
@@ -31,7 +32,7 @@ const AppProvider = ({ children }) => {
       //console.log(data.results.length)
 
       if (queryTerm === '') {
-        setError({
+        setSearchError({
           show: true,
           msg: 'Please Enter Something!'
         })
@@ -42,7 +43,7 @@ const AppProvider = ({ children }) => {
 
       if (data.results.length === 0) {
         setIsLoading(false)
-        setError({
+        setSearchError({
           show: true,
           msg: 'Movie not found!'
         })
@@ -50,7 +51,7 @@ const AppProvider = ({ children }) => {
         setSearchTerm('')
       } else {
         setSearchedMovies(data.results)
-        setError({ show: false, msg: '' })
+        setSearchError({ show: false, msg: '' })
         setIsLoading(false)
         setSearchTerm(queryTerm)
       }
@@ -120,7 +121,8 @@ const AppProvider = ({ children }) => {
         searchTerm,
         setSearchTerm,
         page,
-        setPage
+        setPage,
+        searchError
       }}
     >
       {children}
