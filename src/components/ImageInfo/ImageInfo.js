@@ -149,7 +149,9 @@ const ImageInfo = ({ movie, getTrailer, id }) => {
               genres.map(genre => {
                 return (
                   <h6
-                    className={toggleMode === 'white' ? 'btnWhite' : 'btnBlack'}
+                    className={
+                      toggleMode === 'white' ? 'whiteGenre' : 'blackGenre'
+                    }
                     id='genre'
                     key={genre.id}
                   >
