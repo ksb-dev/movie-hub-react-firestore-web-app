@@ -140,7 +140,7 @@
 }
 
 .castWhiteAlpha {
-  background: rgba(220, 220, 220, 0.9);
+  background: rgba(240, 244, 248, 0.9);
 }
 
 .blackBackground {
@@ -148,5 +148,5 @@
 }
 
 .whiteBackground {
-  background: rgb(220, 220, 220);
+  background: rgb(240, 244, 248);
 }

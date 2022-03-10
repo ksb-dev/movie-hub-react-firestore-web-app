@@ -46,7 +46,7 @@
 }
 
 .whiteMovies {
-  background: whitesmoke;
+  background: rgb(240, 244, 248);
 }
 
 .blackColorCategory {
@@ -54,7 +54,7 @@
 }
 
 .whiteColorCategory {
-  color: #fff;
+  color: rgb(240, 244, 248);
 }
 
 .error {
@@ -70,7 +70,7 @@
 }
 
 .categoryColor {
-  color: #fff;
+  color: rgb(240, 244, 248);
 }
 
 @media screen and (max-width: 786px) {

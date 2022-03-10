@@ -91,7 +91,7 @@
 }
 
 .whiteAlpha {
-  background: rgb(220, 220, 220, 0.9);
+  background: rgb(240, 244, 248, 0.9);
 }
 
 .blackBackground {
@@ -99,7 +99,7 @@
 }
 
 .whiteBackground {
-  background: rgb(220, 220, 220);
+  background: rgb(240, 244, 248);
 }
 
 .blackColor {
@@ -107,7 +107,7 @@
 }
 
 .whiteColor {
-  color: #fff;
+  color: rgb(240, 244, 248);
 }
 
 @media screen and (max-width: 1280px) {

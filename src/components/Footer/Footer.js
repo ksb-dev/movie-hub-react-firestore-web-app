@@ -18,8 +18,8 @@ const Footer = () => {
     <div
       className={
         toggleMode === 'white'
-          ? 'footer footerWhiteBackgroundAlpha footerBlackColor'
-          : 'footer footerBlackBackgroundAlpha footerWhiteColor'
+          ? 'footer footerWhiteBackground footerBlackColor'
+          : 'footer footerBlackBackground footerWhiteColor'
       }
     >
       <Link to='/search'>

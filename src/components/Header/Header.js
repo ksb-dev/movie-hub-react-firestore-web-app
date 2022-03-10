@@ -16,13 +16,7 @@ import whiteMenu from '../../images/white-menu.svg'
 import './Header.css'
 
 const Header = () => {
-  const {
-    toggleMode,
-    setToggleMode,
-    fetchMovies,
-    page,
-    setPage
-  } = useGlobalContext()
+  const { toggleMode, setToggleMode, fetchMovies, setPage } = useGlobalContext()
   const allMenu = useRef(null)
   const back = useRef(null)
 
@@ -60,7 +54,7 @@ const Header = () => {
 
     setTimeout(() => {
       fetchMovies(POPULAR, 'popular', 1)
-    }, 300)
+    }, 0)
     allMenu.current.style.transform = 'translateX(100%)'
     back.current.style.transform = 'translateX(100%)'
   }
@@ -70,7 +64,7 @@ const Header = () => {
 
     setTimeout(() => {
       fetchMovies(TRENDING, 'trending', 1)
-    }, 300)
+    }, 0)
     allMenu.current.style.transform = 'translateX(100%)'
     back.current.style.transform = 'translateX(100%)'
   }
@@ -82,7 +76,7 @@ const Header = () => {
 
     setTimeout(() => {
       fetchMovies(NOW_PLAYING, 'now playing', 1)
-    }, 300)
+    }, 0)
     allMenu.current.style.transform = 'translateX(100%)'
     back.current.style.transform = 'translateX(100%)'
   }
@@ -94,7 +88,7 @@ const Header = () => {
 
     setTimeout(() => {
       fetchMovies(UPCOMING, 'upcoming', 1)
-    }, 300)
+    }, 0)
     allMenu.current.style.transform = 'translateX(100%)'
     back.current.style.transform = 'translateX(100%)'
   }
@@ -106,7 +100,7 @@ const Header = () => {
 
     setTimeout(() => {
       fetchMovies(TOP_RATED, 'top rated', 1)
-    }, 300)
+    }, 0)
     allMenu.current.style.transform = 'translateX(100%)'
     back.current.style.transform = 'translateX(100%)'
   }
@@ -161,8 +155,8 @@ const Header = () => {
       <div
         className={
           toggleMode === 'white'
-            ? 'header headerWhiteBackgroundAlpha headerBlackColor'
-            : 'header headerBlackBackgroundAlpha headerWhiteColor'
+            ? 'header headerWhiteBackground headerBlackColor'
+            : 'header headerBlackBackground headerWhiteColor'
         }
       >
         <div className='name-mode-menu'>

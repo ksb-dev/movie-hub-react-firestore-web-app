@@ -40,6 +40,7 @@
 
 .footerWhiteBackground {
   background: rgb(220, 220, 220);
+  background: rgb(240, 244, 248);
 }
 
 .footerBlackBackground {
@@ -48,6 +49,7 @@
 
 .footerWhiteBackgroundAlpha {
   background: rgba(220, 220, 220, 0.9);
+  background: rgb(240, 244, 248, 0.9);
 }
 
 .footerBlackBackgroundAlpha {
@@ -60,6 +62,7 @@
 
 .footerWhiteColor {
   color: #fff;
+  color: rgb(240, 244, 248);
 }
 
 @media only screen and (max-width: 640px) {
