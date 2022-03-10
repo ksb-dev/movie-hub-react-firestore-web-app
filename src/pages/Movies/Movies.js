@@ -14,14 +14,14 @@ import MovieCard from '../../components/MovieCard/MovieCard'
 import './Movies.css'
 
 const Movies = () => {
-  let [page, setPage] = useState(2)
-
   let {
     movies,
     isLoading,
     category,
     toggleMode,
-    fetchMovies
+    fetchMovies,
+    page,
+    setPage
   } = useGlobalContext()
 
   const POPULAR = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&sort_by=popularity.desc&page=${page}`

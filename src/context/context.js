@@ -13,6 +13,7 @@ const AppProvider = ({ children }) => {
   const [category, setCategory] = useState('')
   const [searchedMovies, setSearchedMovies] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
+  let [page, setPage] = useState(2)
 
   const searchMovies = async (searchTerm, queryTerm) => {
     window.scroll({
@@ -117,7 +118,9 @@ const AppProvider = ({ children }) => {
         searchedMovies,
         setSearchedMovies,
         searchTerm,
-        setSearchTerm
+        setSearchTerm,
+        page,
+        setPage
       }}
     >
       {children}

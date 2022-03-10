@@ -16,7 +16,13 @@ import whiteMenu from '../../images/white-menu.svg'
 import './Header.css'
 
 const Header = () => {
-  const { toggleMode, setToggleMode, fetchMovies } = useGlobalContext()
+  const {
+    toggleMode,
+    setToggleMode,
+    fetchMovies,
+    page,
+    setPage
+  } = useGlobalContext()
   const allMenu = useRef(null)
   const back = useRef(null)
 
@@ -48,6 +54,8 @@ const Header = () => {
   }
 
   const handlePopular = () => {
+    setPage(2)
+
     navigate('/')
 
     setTimeout(() => {
@@ -68,6 +76,8 @@ const Header = () => {
   }
 
   const handleNowPlaying = () => {
+    setPage(2)
+
     navigate('/')
 
     setTimeout(() => {
@@ -78,6 +88,8 @@ const Header = () => {
   }
 
   const handleUpcoming = () => {
+    setPage(2)
+
     navigate('/')
 
     setTimeout(() => {
@@ -88,6 +100,8 @@ const Header = () => {
   }
 
   const handleTopRated = () => {
+    setPage(2)
+
     navigate('/')
 
     setTimeout(() => {
