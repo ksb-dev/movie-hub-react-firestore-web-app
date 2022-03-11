@@ -39,7 +39,9 @@ const Search = () => {
       <Header />
       <div className='search'>
         <label
-          className={toggleMode === 'white' ? 'darkColor' : 'lightColor'}
+          className={
+            toggleMode === 'white' ? 'darkColorSearch' : 'lightColorSearch'
+          }
           id='input'
         >
           Enter your search here
