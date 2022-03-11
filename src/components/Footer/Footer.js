@@ -15,13 +15,7 @@ const Footer = () => {
   const { logout } = useLogOut()
 
   return (
-    <div
-      className={
-        toggleMode === 'white'
-          ? 'footer footerWhiteBackground footerBlackColor'
-          : 'footer footerBlackBackground footerWhiteColor'
-      }
-    >
+    <div className='footer'>
       <h1 className='name'>MovieHub</h1>
       {/*<Link to='/search'>
         <button>

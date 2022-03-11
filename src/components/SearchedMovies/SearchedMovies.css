@@ -1,7 +1,6 @@
 .cat,
 .err {
-  padding-top: 10rem;
-  padding-bottom: 1rem;
+  padding-top: 7rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,15 +12,15 @@
 }
 
 .whiteColorCategory {
-  color: rgb(240, 244, 248);
+  color: rgb(255, 255, 255);
 }
 
 .blackColorCategory {
-  color: rgb(90, 90, 90);
+  color: rgb(120, 120, 120);
 }
 
 @media only screen and (max-width: 640px) {
   .cat {
-    padding-top: 9rem;
+    padding-top: 5.5rem;
   }
 }

@@ -160,50 +160,11 @@ const Header = () => {
       <div
         className={
           toggleMode === 'white'
-            ? 'header headerWhiteBackground headerBlackColor'
-            : 'header headerBlackBackground headerWhiteColor'
+            ? 'header headerWhiteBg headerBlackColor'
+            : 'header headerBlackBg headerWhiteColor'
         }
       >
         <div className='name-mode-menu'>
-          {/*<h3 className='name' onClick={handlePopular}>
-            MovieHub
-      </h3>*/}
-
-          {/*{user && (
-            <h4
-              className={
-                toggleMode === 'white' ? 'headerBlackColor' : 'headerWhiteColor'
-              }
-            >
-              {user.displayName !== null ? (
-                <span>Welcome, {user.displayName}</span>
-              ) : (
-                'Welcome'
-              )}
-            </h4>
-              )}*/}
-
-          <Link to='/search'>
-            <button>
-              <i
-                className={
-                  toggleMode === 'white'
-                    ? 'fa-solid fa-magnifying-glass footerBlackColor'
-                    : 'fa-solid fa-magnifying-glass footerWhiteColor'
-                }
-              ></i>
-              <span
-                className={
-                  toggleMode === 'white'
-                    ? ' footerBlackColor'
-                    : ' footerWhiteColor'
-                }
-              >
-                Search
-              </span>
-            </button>
-          </Link>
-
           <Link to='#' className='search-icon' onClick={logout}>
             <button>
               <i
@@ -220,42 +181,67 @@ const Header = () => {
                     : ' footerWhiteColor'
                 }
               >
-                {user && user.displayName !== null && user.displayName}
+                {user &&
+                  user.displayName !== null &&
+                  user.displayName.toUpperCase()}
               </span>
             </button>
           </Link>
 
           <div className='mode-menu'>
-            {toggleMode === 'white' ? (
-              <p className='mode'>
-                <i
-                  onClick={() => toggle(toggleMode)}
-                  className='fa-solid fa-moon blackModeHome'
-                ></i>
-              </p>
-            ) : (
-              <p>
-                <i
-                  onClick={() => toggle(toggleMode)}
-                  className='fa-solid fa-sun whiteModeHome'
-                ></i>
-              </p>
-            )}
-
             <p>
-              <Link to='/'>
-                <i
-                  className={
-                    toggleMode === 'white'
-                      ? 'fa-solid fa-house headerBlackColor'
-                      : 'fa-solid fa-house headerWhiteColor'
-                  }
-                  id='home'
-                ></i>
+              <Link
+                to='/'
+                className={
+                  toggleMode === 'white'
+                    ? 'headerBlackColor'
+                    : 'headerWhiteColor'
+                }
+              >
+                <i className='fa-solid fa-house'></i>
+                <span>Home</span>
               </Link>
             </p>
 
             <p>
+              <Link
+                to='/search'
+                className={
+                  toggleMode === 'white'
+                    ? 'headerBlackColor'
+                    : 'headerWhiteColor'
+                }
+              >
+                <i
+                  className={
+                    toggleMode === 'white'
+                      ? 'fa-solid fa-magnifying-glass headerBlackColor'
+                      : 'fa-solid fa-magnifying-glass headerWhiteColor'
+                  }
+                ></i>
+                <span>Search</span>
+              </Link>
+            </p>
+
+            {toggleMode === 'white' ? (
+              <p
+                className='mode headerBlackColor'
+                onClick={() => toggle(toggleMode)}
+              >
+                <i className='fa-solid fa-moon blackModeHome'></i>
+                <span>Dark</span>
+              </p>
+            ) : (
+              <p
+                className='mode headerWhiteColor'
+                onClick={() => toggle(toggleMode)}
+              >
+                <i className='fa-solid fa-sun whiteModeHome'></i>
+                <span>Light</span>
+              </p>
+            )}
+
+            <p className='menu'>
               <i
                 className={
                   toggleMode === 'white'

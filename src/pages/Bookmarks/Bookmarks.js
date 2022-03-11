@@ -125,7 +125,7 @@ const Bookmarks = ({ movies }) => {
           })}
       </section>
 
-      <Footer />
+      {/*<Footer />*/}
     </>
   )
 }

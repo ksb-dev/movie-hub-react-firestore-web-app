@@ -184,7 +184,7 @@ const Movie = () => {
 
       {/* Footer */}
 
-      <Footer />
+      {/*<Footer />*/}
 
       {/* person detail */}
 

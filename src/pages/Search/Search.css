@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  top: 7rem;
+  top: 3rem;
   left: 0;
   z-index: 1;
   width: 100vw;
@@ -16,7 +16,7 @@
 }
 
 .search form input {
-  padding: 0.2rem 1rem;
+  padding: 0.4rem 1rem;
   text-align: center;
   border: none;
   background: transparent;
@@ -77,7 +77,7 @@
 
 @media only screen and (max-width: 640px) {
   .search {
-    top: 6rem;
+    top: 2.5rem;
   }
 
   .search form {

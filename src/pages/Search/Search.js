@@ -58,7 +58,7 @@ const Search = () => {
 
       <SearchedMovies />
 
-      <Footer />
+      {/*<Footer />*/}
     </>
   )
 }

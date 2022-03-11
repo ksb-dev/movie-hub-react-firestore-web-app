@@ -285,11 +285,11 @@ Single Movie
 }*/
 
 .black {
-  background: rgb(90, 90, 90);
+  background: rgb(120, 120, 120);
 }
 
 .white {
-  background: rgb(240, 240, 240);
+  background: #fff;
 }
 
 ::-webkit-scrollbar {

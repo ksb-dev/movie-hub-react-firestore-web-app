@@ -102,7 +102,6 @@ const Movies = () => {
       <div className='more'>
         <button onClick={handleClick}>Load More</button>
       </div>
-      <Footer />
     </>
   )
 }
