@@ -8,7 +8,6 @@ import { useBookmarks } from '../../hooks/useBookmarks'
 
 // Components
 import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
 import MovieCard from '../../components/MovieCard/MovieCard'
 
 // Style
@@ -67,8 +66,8 @@ const Bookmarks = ({ movies }) => {
       <h4
         className={
           toggleMode === 'white'
-            ? 'category blackColorCategory whiteMovies'
-            : 'category whiteColorCategory blackMovies'
+            ? 'cate blackColorCategory whiteMovies'
+            : 'cate whiteColorCategory blackMovies'
         }
       >
         <span id='wish'>
@@ -106,8 +105,6 @@ const Bookmarks = ({ movies }) => {
             )
           })}
       </section>
-
-      {/*<Footer />*/}
     </>
   )
 }

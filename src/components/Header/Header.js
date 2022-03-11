@@ -9,12 +9,6 @@ import { useGlobalAuthContext } from '../../context/AuthContext'
 // Hooks
 import { useLogOut } from '../../hooks/useLogOut'
 
-// SVG
-import mode from '../../images/mode.svg'
-import menu from '../../images/menu.svg'
-import whiteMode from '../../images/white-mode.svg'
-import whiteMenu from '../../images/white-menu.svg'
-
 // Styles
 import './Header.css'
 

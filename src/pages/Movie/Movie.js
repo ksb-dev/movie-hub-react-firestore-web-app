@@ -9,7 +9,6 @@ import PersonDetail from '../../components/PersonDetail/PersonDetail'
 import ImageInfo from '../../components/ImageInfo/ImageInfo'
 import Youtube from '../../components/Youtube/Youtube'
 import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
 
 import './Movie.css'
 
@@ -181,10 +180,6 @@ const Movie = () => {
           )}
         </div>
       </div>
-
-      {/* Footer */}
-
-      {/*<Footer />*/}
 
       {/* person detail */}
 

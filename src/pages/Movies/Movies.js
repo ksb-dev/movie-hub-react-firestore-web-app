@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 // Context
@@ -7,7 +7,6 @@ import { useGlobalAuthContext } from '../../context/AuthContext'
 
 // Components
 import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
 import MovieCard from '../../components/MovieCard/MovieCard'
 
 // Style
@@ -33,8 +32,6 @@ const Movies = () => {
   const { user } = useGlobalAuthContext()
 
   const navigate = useNavigate()
-
-  //console.log(POPULAR)
 
   useEffect(() => {
     if (!user) {

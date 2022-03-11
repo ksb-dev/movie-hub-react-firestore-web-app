@@ -7,7 +7,6 @@ import { useGlobalAuthContext } from '../../context/AuthContext'
 
 // Components
 import SearchedMovies from '../../components/SearchedMovies/SearchedMovies'
-import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 
 import './Search.css'
@@ -15,7 +14,7 @@ import './Search.css'
 const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&query="`
 
 const Search = () => {
-  const { query, setQuery, searchMovies, toggleMode } = useGlobalContext()
+  const { query, setQuery, searchMovies } = useGlobalContext()
   const { user } = useGlobalAuthContext()
 
   const navigate = useNavigate()
@@ -57,8 +56,6 @@ const Search = () => {
       </div>
 
       <SearchedMovies />
-
-      {/*<Footer />*/}
     </>
   )
 }

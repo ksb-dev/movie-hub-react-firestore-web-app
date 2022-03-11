@@ -201,16 +201,12 @@
     font-size: 1rem;
   }
 
-  .header .name-mode-menu a button {
-    font-size: 0.8rem;
-  }
-
   .header .name-mode-menu .mode-menu {
     margin-right: 0rem;
   }
 
   .header .name-mode-menu .mode-menu p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0;
     margin-left: 1rem;
   }
@@ -220,7 +216,7 @@
   }
 
   .header .name-mode-menu .mode-menu p i {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0;
   }
 
