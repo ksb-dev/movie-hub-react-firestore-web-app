@@ -87,6 +87,14 @@
   padding: 0.5rem;
 }
 
+.header .name-mode-menu h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #000;
+}
+
 .header .name-mode-menu a button {
   font-family: 'Montserrat', sans-serif;
   border: none;
@@ -113,7 +121,7 @@
   margin: 0;
   padding: 0;
   cursor: pointer;
-  padding: 0.2rem 0.5rem;
+  padding: 0rem 0.5rem;
   text-align: center;
   margin-left: 0.5rem;
   letter-spacing: 1px;
@@ -125,7 +133,6 @@
 
 .header .name-mode-menu .mode-menu p i {
   padding-right: 0.3rem;
-  font-size: 1rem;
 }
 
 .backBlackBackground {
@@ -188,6 +195,10 @@
     align-items: flex-start;
     justify-content: space-between;
     padding: 0.5rem 1rem;
+  }
+
+  .header .name-mode-menu h4 {
+    font-size: 1rem;
   }
 
   .header .name-mode-menu a button {

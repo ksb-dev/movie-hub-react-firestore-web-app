@@ -165,28 +165,7 @@ const Header = () => {
         }
       >
         <div className='name-mode-menu'>
-          <Link to='#' className='search-icon' onClick={logout}>
-            <button>
-              <i
-                className={
-                  toggleMode === 'white'
-                    ? 'fa-solid fa-circle-user footerBlackColor'
-                    : 'fa-solid fa-circle-user footerWhiteColor'
-                }
-              ></i>
-              <span
-                className={
-                  toggleMode === 'white'
-                    ? ' footerBlackColor'
-                    : ' footerWhiteColor'
-                }
-              >
-                {user &&
-                  user.displayName !== null &&
-                  user.displayName.toUpperCase()}
-              </span>
-            </button>
-          </Link>
+          <h4>moviehub</h4>
 
           <div className='mode-menu'>
             <p>
@@ -240,6 +219,29 @@ const Header = () => {
                 <span>Light</span>
               </p>
             )}
+
+            <p>
+              <Link
+                to='#'
+                onClick={logout}
+                className={
+                  toggleMode === 'white'
+                    ? 'headerBlackColor'
+                    : 'headerWhiteColor'
+                }
+              >
+                <i
+                  className={
+                    toggleMode === 'white'
+                      ? 'fa-solid fa-circle-user footerBlackColor'
+                      : 'fa-solid fa-circle-user footerWhiteColor'
+                  }
+                ></i>
+                <span>
+                  {user && user.displayName !== null && user.displayName}
+                </span>
+              </Link>
+            </p>
 
             <p className='menu'>
               <i
