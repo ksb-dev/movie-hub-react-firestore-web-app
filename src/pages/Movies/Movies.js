@@ -8,6 +8,7 @@ import { useGlobalAuthContext } from '../../context/AuthContext'
 // Components
 import Header from '../../components/Header/Header'
 import MovieCard from '../../components/MovieCard/MovieCard'
+import Footer from '../../components/Footer/Footer'
 
 // Style
 import './Movies.css'
@@ -99,6 +100,8 @@ const Movies = () => {
       <div className='more'>
         <button onClick={handleClick}>Load More</button>
       </div>
+
+      <Footer />
     </>
   )
 }
