@@ -187,6 +187,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    width: 200px;
+  }
+
+  .backMenu .all-menu .all-menu-list {
+    padding: 0;
+  }
+
+  .backMenu .all-menu .all-menu-list li:last-child {
+    margin-bottom: 2rem;
+  }
+
+  .backMenu .all-menu .all-menu-list li {
+    margin: 1rem;
   }
 
   .header {
@@ -217,9 +230,6 @@
     font-size: 0.8rem;
     padding: 0rem;
     margin-left: 0rem;
-  }
-
-  .header .name-mode-menu .mode-menu p span {
   }
 
   .header .name-mode-menu .mode-menu p i {
