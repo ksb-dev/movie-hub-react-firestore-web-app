@@ -1,6 +1,7 @@
 .search {
   position: fixed;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   top: 3rem;
@@ -9,31 +10,32 @@
   width: 100vw;
 }
 
+.search label {
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
 .search form {
-  background: orange;
-  border-radius: 50px;
+  border-radius: 3px;
   margin: 0.5rem;
 }
 
 .search form input {
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
   text-align: center;
   border: none;
   background: transparent;
-  max-width: 600px;
   font-size: 1rem;
   letter-spacing: var(--spacing);
-  width: 300px;
+  width: 500px;
 }
 
 .search form .form-input:focus {
   outline: none;
-  color: #fff;
 }
 
 .search form .form-input::placeholder {
   font-family: 'Montserrat', sans-serif;
-  color: #fff;
   padding-left: 0.2rem;
 }
 
@@ -67,8 +69,8 @@
   }
 
   .search form input {
-    padding: 0.2rem 0.5rem;
-    width: 200px;
+    padding: 0.5rem 0.5rem;
+    width: 90vw;
   }
 
   ::placeholder {
@@ -78,4 +80,20 @@
   .search p i {
     font-size: 1rem;
   }
+}
+
+.darkSearch {
+  background: rgb(13, 37, 63);
+}
+
+.lightSearch {
+  background: #fff;
+}
+
+.darkColorSearch {
+  color: rgb(13, 37, 63);
+}
+
+.lightColorSearch {
+  color: #fff;
 }

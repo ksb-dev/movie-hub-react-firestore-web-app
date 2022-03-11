@@ -9,6 +9,7 @@ import { useBookmarks } from '../../hooks/useBookmarks'
 // Components
 import Header from '../../components/Header/Header'
 import MovieCard from '../../components/MovieCard/MovieCard'
+import Footer from '../../components/Footer/Footer'
 
 // Style
 import './Bookmarks.css'
@@ -105,6 +106,8 @@ const Bookmarks = ({ movies }) => {
             )
           })}
       </section>
+
+      <Footer />
     </>
   )
 }

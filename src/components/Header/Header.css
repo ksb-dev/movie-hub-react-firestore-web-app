@@ -182,6 +182,13 @@
 }
 
 @media only screen and (max-width: 640px) {
+  .all-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
   .header {
     position: fixed;
     top: unset;

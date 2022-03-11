@@ -8,13 +8,14 @@ import { useGlobalAuthContext } from '../../context/AuthContext'
 // Components
 import SearchedMovies from '../../components/SearchedMovies/SearchedMovies'
 import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
 
 import './Search.css'
 
 const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&query="`
 
 const Search = () => {
-  const { query, setQuery, searchMovies } = useGlobalContext()
+  const { query, setQuery, searchMovies, toggleMode } = useGlobalContext()
   const { user } = useGlobalAuthContext()
 
   const navigate = useNavigate()
@@ -37,25 +38,42 @@ const Search = () => {
     <>
       <Header />
       <div className='search'>
+        <label
+          className={toggleMode === 'white' ? 'darkColor' : 'lightColor'}
+          id='input'
+        >
+          Enter your search here
+        </label>
+
         <form
-          className='search-form'
+          className={
+            toggleMode === 'white'
+              ? 'search-form darkSearch'
+              : 'search-form lightSearch'
+          }
           onSubmit={e => {
             e.preventDefault()
             setQuery('')
             searchMovies(SEARCH_API + query, query)
           }}
+          id='input'
         >
           <input
             type='text'
-            className='form-input'
+            className={
+              toggleMode === 'white'
+                ? 'form-input lightColorSearch'
+                : 'form-input darkColorSearch'
+            }
             value={query}
             onChange={e => setQuery(e.target.value)}
-            placeholder='Enter your search here'
           />
         </form>
       </div>
 
       <SearchedMovies />
+
+      <Footer />
     </>
   )
 }

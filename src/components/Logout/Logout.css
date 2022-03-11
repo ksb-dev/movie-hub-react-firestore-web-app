@@ -35,5 +35,9 @@
   color: #0d253f;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 640px) {
+  .logout {
+    top: unset;
+    bottom: 3rem;
+  }
 }
