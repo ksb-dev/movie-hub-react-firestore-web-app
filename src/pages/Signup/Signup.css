@@ -1,7 +1,6 @@
 .main {
   width: 100vw;
   height: 100vh;
-  background: url('../../images/back.jpg');
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,9 +8,22 @@
 }
 
 .main .title h1 {
-  color: #fff;
+  background: linear-gradient(to right, #90cea1, #01b4e4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 2rem;
-  text-shadow: 5px 5px 5px #000;
+}
+
+.main .signup-form h2 {
+  background: linear-gradient(to right, #90cea1, #01b4e4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main .signup-form label span {
+  background: linear-gradient(to right, #90cea1, #01b4e4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .main .signup-form {
@@ -55,8 +67,10 @@
 
 .main .signup-form .btn {
   background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #90cea1;
+  background: linear-gradient(to right, #90cea1, #01b4e4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   padding: 0.5rem 1rem;
   border-radius: 3px;
   margin-right: 1rem;
