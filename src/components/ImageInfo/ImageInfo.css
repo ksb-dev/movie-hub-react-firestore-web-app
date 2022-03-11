@@ -298,7 +298,6 @@
 }
 
 .moreInfoBlackAlpha {
-  background: rgb(120, 120, 120, 0.9);
   background: rgba(13, 37, 63, 0.9);
 }
 
@@ -311,7 +310,7 @@
 }
 
 .whiteMovieColor {
-  color: rgb(1, 180, 228);
+  color: #fff;
 }
 
 .whiteGenre {
@@ -320,16 +319,16 @@
 }
 
 .blackGenre {
-  color: rgb(1, 180, 228);
-  border: 1.5px solid rgb(1, 180, 228);
+  color: #fff;
+  border: 1.5px solid #fff;
 }
 
 .whiteBtn {
   color: rgb(13, 37, 63);
-  background: rgb(1, 180, 228);
+  background: #fff;
 }
 
 .blackBtn {
   background: rgb(13, 37, 63);
-  color: rgb(1, 180, 228);
+  color: #fff;
 }

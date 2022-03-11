@@ -72,8 +72,8 @@ const MovieCard = ({ id, poster_path, title, vote_average, release_date }) => {
         <div
           className={
             toggleMode === 'white'
-              ? 'img-rating movieInfoWhiteBg'
-              : 'img-rating movieInfoBlackBg'
+              ? 'img-rating movieInfoBlackBg'
+              : 'img-rating movieInfoWhiteBg'
           }
         >
           <img
@@ -88,14 +88,14 @@ const MovieCard = ({ id, poster_path, title, vote_average, release_date }) => {
       <div
         className={
           toggleMode === 'white'
-            ? 'movie-info movieInfoWhiteBg'
-            : 'movie-info movieInfoBlackBg'
+            ? 'movie-info movieInfoBlackBg'
+            : 'movie-info movieInfoWhiteBg'
         }
       >
         <div className='title-year'>
           <h5
             className={
-              toggleMode === 'white' ? 'title lightTitle' : 'title darktTitle'
+              toggleMode === 'white' ? 'title darkTitle' : 'title lightTitle'
             }
           >
             {title &&
@@ -105,9 +105,7 @@ const MovieCard = ({ id, poster_path, title, vote_average, release_date }) => {
           <div>
             <h5
               className={
-                toggleMode === 'white'
-                  ? 'year lightBg darkTitle'
-                  : 'year darkBg lightTitle'
+                toggleMode === 'white' ? 'year darkTitle' : 'year lightTitle'
               }
             >
               {release_date ? release_date.substring(0, 4) : ''}

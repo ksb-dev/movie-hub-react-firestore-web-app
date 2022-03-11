@@ -3,7 +3,6 @@
   border-radius: 3px;
   width: 250px;
   margin: 1rem;
-  box-shadow: 1px 1px 5px #000;
 }
 
 .one-movie:hover {
@@ -148,11 +147,11 @@
 }
 
 .movieInfoWhiteBg {
-  background: rgb(13, 37, 63);
+  background: #001124;
 }
 
 .movieInfoBlackBg {
-  background: rgb(255, 255, 255);
+  background: rgb(220, 220, 220);
 }
 
 .darkTitle {
@@ -160,7 +159,7 @@
 }
 
 .lightTitle {
-  color: rgb(1, 180, 228);
+  color: #fff;
 }
 
 .darkBg {
@@ -168,5 +167,5 @@
 }
 
 .lightBg {
-  background: rgb(1, 180, 228);
+  background: #fff;
 }

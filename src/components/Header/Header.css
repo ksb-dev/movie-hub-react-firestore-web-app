@@ -92,7 +92,7 @@
   padding: 0.2rem;
   font-size: 1.5rem;
   text-transform: uppercase;
-  background: linear-gradient(to right, #90cea1, #01b4e4);
+  background: -webkit-linear-gradient(#90cea1, #01b4e4, #0d253f);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   border-radius: 3px;
@@ -115,6 +115,7 @@
 }
 
 .header .name-mode-menu .mode-menu {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -124,7 +125,7 @@
 .header .name-mode-menu .mode-menu p {
   margin: 0;
   cursor: pointer;
-  padding: 0rem 0.5rem;
+  padding: 0rem 1rem;
   text-align: center;
   margin-left: 0.5rem;
   letter-spacing: 1px;
@@ -173,9 +174,15 @@
 
 .headerWhiteColor {
   color: rgb(1, 180, 228);
+  color: rgb(13, 37, 63);
+  color: rgb(144, 206, 161);
+  color: #fff;
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 786px) {
+  .header .name-mode-menu .mode-menu p {
+    padding: 0 0.5rem;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -197,7 +204,7 @@
   .header .name-mode-menu .mode-menu p {
     font-size: 1rem;
     padding: 0.2rem;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
   }
 
   .header .name-mode-menu .mode-menu p span {

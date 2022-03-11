@@ -99,7 +99,7 @@
 }
 
 .whiteColor {
-  color: rgb(1, 180, 228);
+  color: #fff;
 }
 
 @media screen and (max-width: 1280px) {

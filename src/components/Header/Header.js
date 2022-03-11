@@ -6,18 +6,18 @@ import { useNavigate, Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context/context'
 import { useGlobalAuthContext } from '../../context/AuthContext'
 
-// Hooks
-import { useLogOut } from '../../hooks/useLogOut'
+// Components
+import Logout from '../Logout/Logout'
 
 // Styles
 import './Header.css'
 
 const Header = () => {
   const { toggleMode, setToggleMode, fetchMovies, setPage } = useGlobalContext()
-  const { logout } = useLogOut()
 
   const allMenu = useRef(null)
   const back = useRef(null)
+  const log = useRef(null)
 
   const navigate = useNavigate()
   const { user } = useGlobalAuthContext()
@@ -104,10 +104,13 @@ const Header = () => {
     back.current.style.transform = 'translateX(100%)'
   }
 
+  const showLogout = () => {
+    log.current.style.transform = 'translateX(0%)'
+  }
+
   return (
     <>
-      {/* movie categories */}
-
+      <Logout log={log} />
       <div
         ref={back}
         className={
@@ -214,10 +217,9 @@ const Header = () => {
               </p>
             )}
 
-            <p>
+            <p onClick={showLogout}>
               <Link
                 to='#'
-                onClick={logout}
                 className={
                   toggleMode === 'white'
                     ? 'headerWhiteColor'
