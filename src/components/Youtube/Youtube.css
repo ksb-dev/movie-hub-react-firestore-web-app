@@ -19,6 +19,11 @@
   border: none;
 }
 
+.youtube-div .close-btn:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
 .youtube-div .close-btn .fa-solid {
   margin-bottom: 1rem;
   cursor: pointer;

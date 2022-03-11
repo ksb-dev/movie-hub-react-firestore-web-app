@@ -127,6 +127,11 @@
   letter-spacing: 1px;
 }
 
+.header .name-mode-menu .mode-menu p:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
 .header .name-mode-menu .mode-menu .menu {
   border: none;
 }
