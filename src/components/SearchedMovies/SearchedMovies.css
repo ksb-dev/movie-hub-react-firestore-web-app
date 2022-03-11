@@ -11,12 +11,12 @@
   letter-spacing: 1px;
 }
 
-.whiteColorCategory {
-  color: rgb(255, 255, 255);
+.whiteColorSearch {
+  color: rgb(1, 180, 228);
 }
 
-.blackColorCategory {
-  color: rgb(120, 120, 120);
+.blackColorSearch {
+  color: rgb(13, 37, 63);
 }
 
 @media only screen and (max-width: 640px) {

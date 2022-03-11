@@ -299,6 +299,7 @@
 
 .moreInfoBlackAlpha {
   background: rgb(120, 120, 120, 0.9);
+  background: rgba(13, 37, 63, 0.9);
 }
 
 .moreInfoWhiteAlpha {
@@ -306,29 +307,29 @@
 }
 
 .blackMovieColor {
-  color: rgb(120, 120, 120);
+  color: rgb(13, 37, 63);
 }
 
 .whiteMovieColor {
-  color: rgb(255, 255, 255);
+  color: rgb(1, 180, 228);
 }
 
 .whiteGenre {
-  color: rgb(120, 120, 120);
-  border: 1.5px solid rgb(120, 120, 120);
+  color: rgb(13, 37, 63);
+  border: 1.5px solid rgb(13, 37, 63);
 }
 
 .blackGenre {
-  color: rgb(255, 255, 255);
-  border: 1.5px solid rgb(255, 255, 255);
+  color: rgb(1, 180, 228);
+  border: 1.5px solid rgb(1, 180, 228);
 }
 
 .whiteBtn {
-  color: #000;
-  background: #fff;
+  color: rgb(13, 37, 63);
+  background: rgb(1, 180, 228);
 }
 
 .blackBtn {
-  color: #fff;
-  background: #000;
+  background: rgb(13, 37, 63);
+  color: rgb(1, 180, 228);
 }

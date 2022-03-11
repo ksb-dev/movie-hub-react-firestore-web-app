@@ -31,19 +31,11 @@
 }
 
 .blackMovies {
-  background: rgb(120, 120, 120);
+  background: rgb(13, 37, 63);
 }
 
 .whiteMovies {
   background: rgb(255, 255, 255);
-}
-
-.blackColorCategory {
-  color: rgb(120, 120, 120);
-}
-
-.whiteColorCategory {
-  color: rgb(255, 255, 255);
 }
 
 .error {

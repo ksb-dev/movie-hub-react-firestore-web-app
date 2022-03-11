@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 // Context
 import { useGlobalAuthContext } from '../../context/AuthContext'
+import { useGlobalContext } from '../../context/context'
 
 // Hooks
 import { useFirestore } from '../../hooks/useFirestore'
@@ -17,6 +18,7 @@ const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
 
 const MovieCard = ({ id, poster_path, title, vote_average, release_date }) => {
   const { user } = useGlobalAuthContext()
+  const { toggleMode } = useGlobalContext()
   const { addDocument, deleteDocument } = useFirestore('bookmarks')
   const { documents } = useBookmarks('bookmarks')
   const [bookmark, setBookmark] = useState(false)
@@ -67,7 +69,13 @@ const MovieCard = ({ id, poster_path, title, vote_average, release_date }) => {
   return (
     <>
       <Link to={`/movie/${id}`}>
-        <div className='img-rating'>
+        <div
+          className={
+            toggleMode === 'white'
+              ? 'img-rating movieInfoWhiteBg'
+              : 'img-rating movieInfoBlackBg'
+          }
+        >
           <img
             src={poster_path === null ? url : IMG_PATH + poster_path}
             alt={title}
@@ -77,15 +85,31 @@ const MovieCard = ({ id, poster_path, title, vote_average, release_date }) => {
         </div>
       </Link>
 
-      <div className='movie-info'>
+      <div
+        className={
+          toggleMode === 'white'
+            ? 'movie-info movieInfoWhiteBg'
+            : 'movie-info movieInfoBlackBg'
+        }
+      >
         <div className='title-year'>
-          <h5 className='title'>
+          <h5
+            className={
+              toggleMode === 'white' ? 'title lightTitle' : 'title darktTitle'
+            }
+          >
             {title &&
               (title.length > 30 ? title.substring(0, 30) + '...' : title)}
           </h5>
 
           <div>
-            <h5 className='year'>
+            <h5
+              className={
+                toggleMode === 'white'
+                  ? 'year lightBg darkTitle'
+                  : 'year darkBg lightTitle'
+              }
+            >
               {release_date ? release_date.substring(0, 4) : ''}
             </h5>
           </div>

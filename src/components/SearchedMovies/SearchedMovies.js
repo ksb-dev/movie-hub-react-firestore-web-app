@@ -30,22 +30,22 @@ const SearchedMovies = () => {
         <div
           className={
             toggleMode === 'white'
-              ? 'err blackColorCategory'
-              : 'err whiteColorCategory'
+              ? 'err blackColorSearch'
+              : 'err whiteColorSearch'
           }
         >
           {searchError.msg}
         </div>
       )}
 
-      {/* movie category*/}
+      {/* movie Search*/}
 
       {searchTerm && (
         <h4
           className={
             toggleMode === 'white'
-              ? 'cat blackColorCategory'
-              : 'cat whiteColorCategory'
+              ? 'cat blackColorSearch'
+              : 'cat whiteColorSearch'
           }
         >
           {searchTerm}

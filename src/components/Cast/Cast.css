@@ -134,19 +134,3 @@
     font-weight: 400;
   }
 }
-
-.castBlackAlpha {
-  background: rgba(120, 120, 120, 0.9);
-}
-
-.castWhiteAlpha {
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.blackBackground {
-  background: rgb(120, 120, 120);
-}
-
-.whiteBackground {
-  background: rgb(255, 255, 255);
-}

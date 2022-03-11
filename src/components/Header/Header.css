@@ -89,10 +89,14 @@
 
 .header .name-mode-menu h4 {
   margin: 0;
-  padding: 0;
+  padding: 0.2rem;
   font-size: 1.5rem;
   text-transform: uppercase;
-  text-shadow: 1px 1px 1px #000;
+  background: linear-gradient(to right, #90cea1, #01b4e4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .header .name-mode-menu a button {
@@ -119,7 +123,6 @@
 
 .header .name-mode-menu .mode-menu p {
   margin: 0;
-  padding: 0;
   cursor: pointer;
   padding: 0rem 0.5rem;
   text-align: center;
@@ -141,54 +144,35 @@
 }
 
 .backBlackBackground {
-  background: rgba(100, 100, 100, 0.9);
+  background: rgba(13, 37, 63, 0.9);
 }
 
 .backWhiteBackground {
-  background: rgba(235, 235, 235, 0.9);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .menuBlackBackground {
-  background: rgb(100, 100, 100);
+  background: rgb(13, 37, 63);
 }
 
 .menuWhiteBackground {
-  background: rgb(235, 235, 235);
+  background: rgb(255, 255, 255);
 }
 
 .headerWhiteBg {
-  background: rgb(235, 235, 235);
+  background: rgb(255, 255, 255);
 }
 
 .headerBlackBg {
-  background: rgb(100, 100, 100);
-}
-
-.headerWhiteBackgroundAlpha {
-  background: rgba(235, 235, 235, 0.9);
-}
-
-.headerBlackBackgroundAlpha {
-  background: rgb(100, 100, 100, 0.9);
-  /*box-shadow: 1px 1px 1px rgb(220, 220, 220);*/
+  background: rgb(13, 37, 63);
 }
 
 .headerBlackColor {
-  color: rgb(90, 90, 90);
+  color: rgb(13, 37, 63);
 }
 
 .headerWhiteColor {
-  color: rgb(235, 235, 235);
-  color: #fff;
-}
-
-.footerBlackColor {
-  color: rgb(90, 90, 90);
-}
-
-.footerWhiteColor {
-  color: rgb(235, 235, 235);
-  color: #fff;
+  color: rgb(1, 180, 228);
 }
 
 @media only screen and (max-width: 1280px) {
@@ -203,7 +187,7 @@
   }
 
   .header .name-mode-menu h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .header .name-mode-menu .mode-menu {
@@ -212,7 +196,7 @@
 
   .header .name-mode-menu .mode-menu p {
     font-size: 1rem;
-    padding: 0;
+    padding: 0.2rem;
     margin-left: 1rem;
   }
 
@@ -221,7 +205,7 @@
   }
 
   .header .name-mode-menu .mode-menu p i {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0;
   }
 

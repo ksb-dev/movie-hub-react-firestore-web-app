@@ -71,7 +71,7 @@
 }
 
 .blackBackground {
-  background: rgb(120, 120, 120);
+  background: rgb(13, 37, 63);
 }
 
 .whiteBackground {
@@ -79,9 +79,9 @@
 }
 
 .blackColor {
-  color: rgb(120, 120, 120);
+  color: rgb(13, 37, 63);
 }
 
 .whiteColor {
-  color: rgb(255, 255, 255);
+  color: rgb(1, 180, 228);
 }

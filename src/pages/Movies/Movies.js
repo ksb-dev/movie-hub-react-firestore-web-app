@@ -64,11 +64,7 @@ const Movies = () => {
       {category && (
         <h4 className='category'>
           <span
-            className={
-              toggleMode === 'white'
-                ? 'blackColorCategory'
-                : 'whiteColorCategory'
-            }
+            className={toggleMode === 'white' ? 'blackColor' : 'whiteColor'}
           >
             {category}
           </span>

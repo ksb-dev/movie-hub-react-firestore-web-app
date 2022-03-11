@@ -87,27 +87,19 @@
 }
 
 .blackAlpha {
-  background: rgba(120, 120, 120, 1);
+  background: rgba(13, 37, 63, 1);
 }
 
 .whiteAlpha {
   background: (255, 255, 255, 1);
 }
 
-.blackBackground {
-  background: rgb(120, 120, 120);
-}
-
-.whiteBackground {
-  background: #fff;
-}
-
 .blackColor {
-  color: rgb(120, 120, 120);
+  color: rgb(13, 37, 63);
 }
 
 .whiteColor {
-  color: #fff;
+  color: rgb(1, 180, 228);
 }
 
 @media screen and (max-width: 1280px) {

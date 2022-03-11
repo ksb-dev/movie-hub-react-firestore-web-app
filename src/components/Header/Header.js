@@ -154,12 +154,12 @@ const Header = () => {
       <div
         className={
           toggleMode === 'white'
-            ? 'header headerWhiteBg headerBlackColor'
-            : 'header headerBlackBg headerWhiteColor'
+            ? 'header headerBlackBg headerWhiteColor'
+            : 'header headerWhiteBg headerBlackColor'
         }
       >
         <div className='name-mode-menu'>
-          <h4>moviehub</h4>
+          <h4 onClick={handlePopular}>moviehub</h4>
 
           <div className='mode-menu'>
             <p>
@@ -167,8 +167,8 @@ const Header = () => {
                 to='/'
                 className={
                   toggleMode === 'white'
-                    ? 'headerBlackColor'
-                    : 'headerWhiteColor'
+                    ? 'headerWhiteColor'
+                    : 'headerBlackColor'
                 }
               >
                 <i className='fa-solid fa-house'></i>
@@ -181,15 +181,15 @@ const Header = () => {
                 to='/search'
                 className={
                   toggleMode === 'white'
-                    ? 'headerBlackColor'
-                    : 'headerWhiteColor'
+                    ? 'headerWhiteColor'
+                    : 'headerBlackColor'
                 }
               >
                 <i
                   className={
                     toggleMode === 'white'
-                      ? 'fa-solid fa-magnifying-glass headerBlackColor'
-                      : 'fa-solid fa-magnifying-glass headerWhiteColor'
+                      ? 'fa-solid fa-magnifying-glass headerWhiteColor'
+                      : 'fa-solid fa-magnifying-glass headerBlackColor'
                   }
                 ></i>
                 <span>Search</span>
@@ -198,18 +198,18 @@ const Header = () => {
 
             {toggleMode === 'white' ? (
               <p
-                className='mode headerBlackColor'
+                className='mode headerWhiteColor'
                 onClick={() => toggle(toggleMode)}
               >
-                <i className='fa-solid fa-moon blackModeHome'></i>
+                <i className='fa-solid fa-moon headerWhiteColor'></i>
                 <span>Dark</span>
               </p>
             ) : (
               <p
-                className='mode headerWhiteColor'
+                className='mode headerBlackColor'
                 onClick={() => toggle(toggleMode)}
               >
-                <i className='fa-solid fa-sun whiteModeHome'></i>
+                <i className='fa-solid fa-sun headerBlackColor'></i>
                 <span>Light</span>
               </p>
             )}
@@ -220,15 +220,15 @@ const Header = () => {
                 onClick={logout}
                 className={
                   toggleMode === 'white'
-                    ? 'headerBlackColor'
-                    : 'headerWhiteColor'
+                    ? 'headerWhiteColor'
+                    : 'headerBlackColor'
                 }
               >
                 <i
                   className={
                     toggleMode === 'white'
-                      ? 'fa-solid fa-circle-user footerBlackColor'
-                      : 'fa-solid fa-circle-user footerWhiteColor'
+                      ? 'fa-solid fa-circle-user headerWhiteColor'
+                      : 'fa-solid fa-circle-user headerBlackColor'
                   }
                 ></i>
                 <span>
@@ -241,8 +241,8 @@ const Header = () => {
               <i
                 className={
                   toggleMode === 'white'
-                    ? 'fa fa-bars headerBlackColor'
-                    : 'fa fa-bars headerWhiteColor'
+                    ? 'fa fa-bars headerWhiteColor'
+                    : 'fa fa-bars headerBlackColor'
                 }
                 onClick={showMenu}
               ></i>

@@ -92,7 +92,7 @@
 }
 
 .personBlackAlpha {
-  background: rgba(120, 120, 120, 0.9);
+  background: rgb(13, 37, 63, 0.9);
 }
 
 .personWhiteAlpha {
@@ -100,7 +100,7 @@
 }
 
 .personBlackBackground {
-  background: rgb(120, 120, 120);
+  background: rgb(13, 37, 63);
 }
 
 .personWhiteBackground {
@@ -108,7 +108,7 @@
 }
 
 .blackColor {
-  color: rgb(120, 120, 120);
+  color: rgb(13, 37, 63);
 }
 
 .whiteColor {
