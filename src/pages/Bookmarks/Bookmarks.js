@@ -71,26 +71,8 @@ const Bookmarks = ({ movies }) => {
             : 'category whiteColorCategory blackMovies'
         }
       >
-        <span
-          style={{
-            background: 'tomato',
-            color: 'white',
-            padding: '0.5rem 1rem',
-            borderRadius: '50px'
-          }}
-        >
-          Wishlist{' '}
-          <span
-            style={{
-              marginLeft: '0.5rem',
-              background: '#fff',
-              color: 'tomato',
-              borderRadius: '100%',
-              padding: '0 0.3rem'
-            }}
-          >
-            {bookmarks.length}
-          </span>
+        <span id='wish'>
+          Wishlist <span>{bookmarks.length}</span>
         </span>
       </h4>
 
