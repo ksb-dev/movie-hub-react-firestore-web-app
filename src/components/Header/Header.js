@@ -140,7 +140,7 @@ const Header = () => {
                 onClick={hideMenu}
               ></i>
             </li>
-            <li className='bookmarks'>
+            <li className='bookmarks' onClick={hideMenu}>
               <Link to='/bookmarks'>Wishlist</Link>
             </li>
             <li onClick={handlePopular}>Popular</li>
