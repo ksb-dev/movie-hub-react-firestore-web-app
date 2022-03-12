@@ -20,6 +20,9 @@ function App () {
       <>
         <BrowserRouter>
           <Routes>
+            <Route path='/login' element={<Login />} />
+
+            <Route path='/signup' element={<Signup />} />
             {authIsReady && (
               <>
                 <Route exact path='/' element={<Home />} />
