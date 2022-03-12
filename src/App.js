@@ -17,28 +17,30 @@ function App () {
 
   return (
     <div className={toggleMode === 'white' ? 'view white' : 'view black'}>
-      {authIsReady && (
-        <>
-          <BrowserRouter>
-            <Routes>
-              <Route exact path='/' element={<Home />} />
+      <>
+        <BrowserRouter>
+          <Routes>
+            {authIsReady && (
+              <>
+                <Route exact path='/' element={<Home />} />
 
-              <Route path='/movie/:id' element={<Movie />} />
+                <Route path='/movie/:id' element={<Movie />} />
 
-              <Route path='/search' element={<Search />} />
+                <Route path='/search' element={<Search />} />
 
-              <Route
-                path='/bookmarks'
-                element={<Bookmarks movies={movies} />}
-              />
+                <Route
+                  path='/bookmarks'
+                  element={<Bookmarks movies={movies} />}
+                />
+              </>
+            )}
 
-              <Route path='/login' element={<Login />} />
+            <Route path='/login' element={<Login />} />
 
-              <Route path='/signup' element={<Signup />} />
-            </Routes>
-          </BrowserRouter>
-        </>
-      )}
+            <Route path='/signup' element={<Signup />} />
+          </Routes>
+        </BrowserRouter>
+      </>
     </div>
   )
 }
