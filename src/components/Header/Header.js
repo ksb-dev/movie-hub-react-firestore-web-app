@@ -235,18 +235,18 @@ const Header = () => {
                 ></i>
                 <span>
                   {user && user.displayName !== null && user.displayName}
+                  {user && user.displayName === null && 'User'}
                 </span>
               </Link>
             </p>
 
-            <p className='menu'>
+            <p className='menu' onClick={showMenu}>
               <i
                 className={
                   toggleMode === 'white'
                     ? 'fa fa-bars headerWhiteColor'
                     : 'fa fa-bars headerBlackColor'
                 }
-                onClick={showMenu}
               ></i>
             </p>
           </div>
