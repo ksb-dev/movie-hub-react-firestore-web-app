@@ -13,7 +13,7 @@ import Bookmarks from './pages/Bookmarks/Bookmarks'
 
 function App () {
   const { toggleMode, movies } = useGlobalContext()
-  const { authIsReady } = useGlobalAuthContext()
+  const { authIsReady, user } = useGlobalAuthContext()
 
   return (
     <div className={toggleMode === 'white' ? 'view white' : 'view black'}>
@@ -32,12 +32,12 @@ function App () {
                   path='/bookmarks'
                   element={<Bookmarks movies={movies} />}
                 />
+
+                <Route path='/login' element={<Login />} />
+
+                <Route path='/signup' element={<Signup />} />
               </>
             )}
-
-            <Route path='/login' element={<Login />} />
-
-            <Route path='/signup' element={<Signup />} />
           </Routes>
         </BrowserRouter>
       </>
