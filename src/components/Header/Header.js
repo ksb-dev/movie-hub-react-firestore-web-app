@@ -162,7 +162,7 @@ const Header = () => {
         }
       >
         <div className='name-mode-menu'>
-          <h4 onClick={handlePopular}>moviehub</h4>
+          <h4 onClick={handlePopular}>MovieHub</h4>
 
           <div className='mode-menu'>
             <p>
