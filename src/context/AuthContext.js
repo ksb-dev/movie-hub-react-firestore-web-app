@@ -27,7 +27,8 @@ const AuthContextProvider = ({ children }) => {
       //const unsubscribe = dispatch({ type: 'IS_AUTH_READY', payload: user })
       //unsubscribe()
 
-      dispatch({ type: 'IS_AUTH_READY', payload: user })
+      const unsubscribe = dispatch({ type: 'IS_AUTH_READY', payload: user })
+      console.log(unsubscribe)
     })
   }, [])
 

@@ -65,7 +65,7 @@ export default function Login () {
           Don't have an account ? <Link to='/signup'>Signup</Link>
         </h5>
 
-        {error && <h4>{error}</h4>}
+        {error && <h4 style={{ color: '#fff' }}>{error}</h4>}
       </form>
     </div>
   )
