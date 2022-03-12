@@ -30,7 +30,7 @@ const Search = () => {
 
   useEffect(() => {
     if (!user) {
-      navigate('/')
+      navigate('/login')
     }
   }, [user, navigate])
 
