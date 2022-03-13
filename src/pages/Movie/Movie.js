@@ -113,9 +113,13 @@ const Movie = () => {
         let trailerUrl = await response.json()
 
         trailerUrl.results.map(result => {
-          if (result.official === true) {
+          {
+            /*if (result.official === true) {
             setTrailerUrl(result.key)
+          }*/
           }
+          setTrailerUrl(result.key)
+
           return 0
         })
       } catch (error) {
