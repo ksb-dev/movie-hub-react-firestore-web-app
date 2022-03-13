@@ -37,7 +37,11 @@ const Search = () => {
   return (
     <>
       <Header />
-      <div className='search'>
+      <div
+        className={
+          toggleMode === 'white' ? 'search lightSearch' : 'search darkSearch'
+        }
+      >
         <label
           className={
             toggleMode === 'white' ? 'darkColorSearch' : 'lightColorSearch'
